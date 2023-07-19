@@ -1,4 +1,5 @@
 import styles from "./styles/Page.module.scss";
+import { SplitBackground } from "./components/SplitBackground/SplitBackground";
 
 export default function Home() {
   return (
@@ -7,11 +8,7 @@ export default function Home() {
         className={`${styles.section} ${styles["background--blue"]} ${styles["hero"]} `}
       ></section>
       <section className={`${styles.section} ${styles["what-we-do"]}`}>
-        <div className={` ${styles["what-we-do__background-left"]}`}>
-          <div className={`${styles["what-we-do__background-text"]}`}>
-            Automation
-          </div>
-        </div>
+        <SplitBackground text="Automation"></SplitBackground>
       </section>
       <section className={`${styles.section} ${styles["our-work"]} `}></section>
       <section

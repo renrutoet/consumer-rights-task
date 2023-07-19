@@ -1,12 +1,10 @@
-$dlp-light: #071D21;
-$dlp-dark: #030B0C;
-$primary-white: #fff;
-
-$primary-font: Playfair Display;
+@import "./variables.scss";
 
 .section {
   height: 100vh;
-  width: 100vw
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
 }
 
 .hero {
@@ -17,33 +15,7 @@ $primary-font: Playfair Display;
 }
 
 .what-we-do {
-  overflow: hidden;
   background-color: $dlp-light;
-
-  &__background-left {
-    position:relative;
-    left: -50%;
-    transform: rotate(-15deg)  ;
-    width: 100%;
-    height: 150%;
-    background-color: $dlp-dark;
-  }
-
-  &__background-text {
-    position: relative;
-    left: calc(100% - 3.5rem);
-    //TODO tweak for different devices, position drifts as viewport grows/shrinks
-    top: 17.5%;
-    
-    user-select: none;
-    writing-mode: vertical-rl;
-    
-    color: $primary-white;
-    font-size: 15rem;
-    opacity: 25%;
-    font-style: italic;
-    font-family: $primary-font;
-  }
 }
 
 .our-work {
