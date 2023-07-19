@@ -1,17 +1,61 @@
+$dlp-light: #071D21;
+$dlp-dark: #030B0C;
+$primary-white: #fff;
+
+$primary-font: Playfair Display;
+
 .section {
-    height: 100vh;
-    width: 100vw
+  height: 100vh;
+  width: 100vw
+}
+
+.hero {
+  background-image: url("../../../public/dlp-banner.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.what-we-do {
+  overflow: hidden;
+  background-color: $dlp-light;
+
+  &__background-left {
+    position:relative;
+    left: -50%;
+    transform: rotate(-15deg)  ;
+    width: 100%;
+    height: 150%;
+    background-color: $dlp-dark;
   }
-  
-  .background--blue {
-    background-color: blue;
+
+  &__background-text {
+    position: relative;
+    left: calc(100% - 3.5rem);
+    //TODO tweak for different devices, position drifts as viewport grows/shrinks
+    top: 17.5%;
+    
+    user-select: none;
+    writing-mode: vertical-rl;
+    
+    color: $primary-white;
+    font-size: 15rem;
+    opacity: 25%;
+    font-style: italic;
+    font-family: $primary-font;
   }
-  .background--red {
-    background-color: red;
-  }
-  .background--green {
-    background-color: green;
-  }
-  .background--yellow {
-    background-color: yellow;
-  }
+}
+
+.our-work {
+  background-image: url("../../../public/dlp-laptop.png"), url("../../../public/dlp-block-background.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 50%, cover ;
+}
+
+.get-in-touch {
+  background-image: url("../../../public/dlp-footer-background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
