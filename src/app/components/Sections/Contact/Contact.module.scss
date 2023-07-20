@@ -1,0 +1,46 @@
+@import "../../../styles/variables.scss";
+
+.get-in-touch {
+    background-image: url("../../../../../public/dlp-footer-background.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover ;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-methods {
+    width: 50%;
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: $primary-white;
+    font-family: $font-source-sans-3;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    width: 50%;
+    height: 20%;
+
+    background-color: red;
+  }
+  .footer-details {
+    width: 50%;
+    height: 20%;
+
+    background-color: green;
+  }
+
+  .icons {
+    aspect-ratio: 1/1;
+    width: 50px;
+  }

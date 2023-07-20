@@ -3,6 +3,7 @@
 import styles from './styles/Page.module.scss'
 import { SplitBackground } from './components/SplitBackground/SplitBackground'
 import { Hero } from './components/Sections/Hero/Hero'
+import { Contact } from './components/Sections/Contact/Contact'
 
 export default function Home() {
     return (
@@ -14,9 +15,7 @@ export default function Home() {
             <section
                 className={`${styles.section} ${styles['our-work']} `}
             ></section>
-            <section
-                className={`${styles.section} ${styles['get-in-touch']} `}
-            ></section>
+            <Contact />
         </main>
     )
 }
