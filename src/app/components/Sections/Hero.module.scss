@@ -23,7 +23,7 @@
 
     &__pre-text {
         font-style: italic;
-        font-family: $primary-font;
+        font-family: $font-playfair-display;
         font-size: 3rem;
 
         margin-bottom: 2rem;
@@ -31,7 +31,7 @@
     
     &__main-text {
         font-style: normal;
-        font-family: $secondary-font;
+        font-family: $font-source-sans-3;
         font-size: 5rem;
 
         line-height: 6rem;
@@ -59,7 +59,7 @@
         padding-block: 1.5rem;
         padding-inline: 5rem;
 
-        font-family: $secondary-font;
+        font-family: $font-source-sans-3;
         font-size: 1.25rem;
 
         &:hover {

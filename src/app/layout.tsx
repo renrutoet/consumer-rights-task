@@ -1,8 +1,17 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Source_Sans_3, Playfair_Display } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const sourceSans = Source_Sans_3({
+    subsets: ['latin'],
+    variable: '--font-source-sans-3',
+    display: 'swap',
+})
+const playfair = Playfair_Display({
+    subsets: ['latin'],
+    variable: '--font-playfair-display',
+    display: 'swap',
+})
 
 export const metadata: Metadata = {
     title: 'Digital Litigation Partners',
@@ -17,7 +26,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={`${sourceSans.variable} ${playfair.variable}`}>
+                {children}
+            </body>
         </html>
     )
 }

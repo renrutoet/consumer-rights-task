@@ -1,10 +1,7 @@
-@import "https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap";
-@import 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap';
-
 $dlp-light: #071D21;
 $dlp-dark: #030B0C;
 $primary-white: #fff;
 $primary-black: #000;
 
-$primary-font: "Playfair Display", serif;
-$secondary-font: "Source Sans 3", sans-serif;
+$font-playfair-display: var(--font-playfair-display);
+$font-source-sans-3: var(--font-source-sans-3);
