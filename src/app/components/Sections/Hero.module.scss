@@ -1,6 +1,8 @@
 @import "../../styles/variables.scss";
 
 .hero {
+    height: 100%;
+    padding-block: 2rem;
     background-image: url("../../../../public/dlp-banner.jpg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -33,6 +35,7 @@
         font-style: normal;
         font-family: $font-source-sans-3;
         font-size: 5rem;
+        font-weight: 600;
 
         line-height: 6rem;
 

@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './styles/Page.module.scss'
 import { SplitBackground } from './components/SplitBackground/SplitBackground'
 import { Hero } from './components/Sections/Hero'

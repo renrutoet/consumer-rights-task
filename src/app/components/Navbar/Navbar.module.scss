@@ -1,0 +1,35 @@
+
+@import "../../styles/variables.scss";
+
+.navbar {
+    width: 80%;
+    margin-inline: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding-bottom: 5rem;
+
+    &__links {
+        display: flex;
+        font-family: $font-playfair-display;
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: $primary-white;
+    }
+
+    &__item {
+        display: flex;
+        gap: 0.25rem;
+        padding-bottom: 1rem;
+        margin-inline: 2rem;
+        list-style: none;
+        border-bottom: 1px solid rgba(255,255,255,0);
+        text-decoration: none;
+        
+        &:hover {
+            border-bottom: 1px solid $primary-white;
+        }
+    }
+}

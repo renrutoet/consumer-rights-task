@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+.container {
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    &--small {
+        transform: scale(0.5);
+    }
+
+    &--large {
+        transform: scale(2);
+    }
+}
+
+.left {
+        position: absolute;
+        width: 12px;
+        height: 3px;
+        background-color: $primary-white;
+        transform: rotate(45deg);
+        top: 50%;
+        
+        &--arrow {
+            position: absolute;
+            width: 12px;
+            height: 0.5px;
+            background-color: $primary-white;
+            transform: rotate(45deg);
+            left: -3px;  
+            top: calc(50% + 6px);
+        }   
+}
+
+.right {
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    background-color: $primary-white;
+    left: calc(50% - 3px);
+    top: 50%;
+    transform: rotate(-45deg);
+    
+    &--arrow {
+        position: absolute;
+        width: 12px;
+        height: 0.5px;
+        background-color: $primary-white;
+        left: calc(50% - 5px);
+        top: calc(50% + 6px);
+        transform: rotate(-45deg);
+    }
+}
+
+.middle {
+    position: absolute;
+    height: 15px;
+    width: 0.5px;
+    background-color: $primary-white;
+    top: 5px;
+    left: calc(50% - 3px);
+}
