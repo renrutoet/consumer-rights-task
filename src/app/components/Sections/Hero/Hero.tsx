@@ -20,7 +20,7 @@ export const Hero = () => {
                 </h1>
             </div>
             <div className={`${HeroStyles['call-to-action']}`}>
-                <button className={`${HeroStyles['call-to-action__button']}`}>
+                <button className={`${PageStyles['button']}`}>
                     LEARN MORE
                 </button>
                 <div className={`${HeroStyles['call-to-action__arrow']}`}>

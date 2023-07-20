@@ -17,3 +17,28 @@
     background-repeat: no-repeat;
     background-size: 50%, cover ;
 }
+
+.button {
+  border: 2px solid $primary-white;
+  border-radius: 50px;
+  
+  background: transparent;
+  color: $primary-white;
+  padding-block: 1.5rem;
+  padding-inline: 5rem;
+
+  font-family: $font-source-sans-3;
+  font-size: 1.25rem;
+  
+  &--small {
+    padding: 0.25rem;
+    font-size: 0.65rem;
+  }
+
+  &:hover {
+      background-color: $primary-white;
+      color: $primary-black;
+      transition: all 0.3s ease;
+  }
+}
+
