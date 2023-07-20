@@ -1,5 +1,6 @@
 import PageStyles from '../../styles/Page.module.scss'
 import HeroStyles from './Hero.module.scss'
+import { Navbar } from '../Navbar/Navbar'
 
 export const Hero = () => {
     return (
