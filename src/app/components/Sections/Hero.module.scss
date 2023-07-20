@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+.hero {
+    background-image: url("../../../../public/dlp-banner.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-direction: column;
+
+    color: white;
+}
+
+.hero-title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__pre-text {
+        font-style: italic;
+        font-family: $primary-font;
+        font-size: 3rem;
+
+        margin-bottom: 2rem;
+    }
+    
+    &__main-text {
+        font-style: normal;
+        font-family: $secondary-font;
+        font-size: 5rem;
+
+        line-height: 6rem;
+
+
+        width: 50%;
+        word-wrap: break-word;
+    }
+}
+
+.call-to-action {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__button {
+        background: transparent;
+        border: 2px solid $primary-white;
+        border-radius: 50%;
+        color: $primary-white;
+        padding-block: 1.5rem;
+        padding-inline: 5rem;
+    }
+
+    &__arrow {
+        margin-block: 4rem  ;
+    }
+}
