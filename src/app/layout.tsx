@@ -26,6 +26,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href="/dlp-logo.svg" sizes="any" />
+            </head>
             <body className={`${sourceSans.variable} ${playfair.variable}`}>
                 {children}
             </body>

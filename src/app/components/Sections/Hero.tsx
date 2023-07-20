@@ -5,7 +5,7 @@ import { Navbar } from '../Navbar/Navbar'
 export const Hero = () => {
     return (
         <section className={`${PageStyles.section}  ${HeroStyles.hero} `}>
-            <div>Nav Bar</div>
+            <Navbar />
             <div className={`${HeroStyles['hero-title']}`}>
                 <p className={`${HeroStyles['hero-title__pre-text']}`}>
                     We are the{' '}
