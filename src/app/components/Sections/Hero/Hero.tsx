@@ -1,8 +1,8 @@
-import PageStyles from '../../styles/Page.module.scss'
+import PageStyles from '../../../styles/Page.module.scss'
 import HeroStyles from './Hero.module.scss'
-import { Navbar } from '../Navbar/Navbar'
-import { heroData } from '../../data/mockHeroData'
-import { ArrowIcon } from '../ArrowIcon/ArrowIcon'
+import { Navbar } from '../../Navbar/Navbar'
+import { heroData } from '../../../data/mockHeroData'
+import { ArrowIcon } from '../../ArrowIcon/ArrowIcon'
 
 export const Hero = () => {
     return (

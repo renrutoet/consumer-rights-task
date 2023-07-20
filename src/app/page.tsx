@@ -2,7 +2,7 @@
 
 import styles from './styles/Page.module.scss'
 import { SplitBackground } from './components/SplitBackground/SplitBackground'
-import { Hero } from './components/Sections/Hero'
+import { Hero } from './components/Sections/Hero/Hero'
 
 export default function Home() {
     return (
