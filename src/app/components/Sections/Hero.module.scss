@@ -48,13 +48,25 @@
     flex-direction: column;
     align-items: center;
 
+
     &__button {
-        background: transparent;
+
         border: 2px solid $primary-white;
-        border-radius: 50%;
+        border-radius: 50px;
+        
+        background: transparent;
         color: $primary-white;
         padding-block: 1.5rem;
         padding-inline: 5rem;
+
+        font-family: $secondary-font;
+        font-size: 1.25rem;
+
+        &:hover {
+            background-color: $primary-white;
+            color: $primary-black;
+            transition: all 0.3s ease;
+        }
     }
 
     &__arrow {
