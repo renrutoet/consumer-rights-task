@@ -10,8 +10,9 @@
 .our-work__grid {
     display: grid;
 
-    grid-template-columns: calc(50% - 1px) 2px calc(50% - 1px);
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: auto;
+    gap: 2rem;
 
     & > div {
         color: white;
@@ -50,8 +51,8 @@
     &__background-text {
         display: block;
         position: absolute;
-        height: 100%;
-        margin-top: 10%;
+        height: 200%;
+        padding-top: 15%;
         left: 50%;
         line-height: 0.25;
 
@@ -59,10 +60,8 @@
         writing-mode: vertical-rl;
 
         @include faded-background-text();
-    }
 
-    &__dash {
-        border-left: 1px dashed rgba(255, 255, 255, 0.25);
+        border-left: 1px dashed rgba(255, 255, 255, 0.5);
     }
 
     &__seo-image-aside {

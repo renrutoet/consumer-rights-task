@@ -84,9 +84,6 @@ export const OurWork = () => {
             </div>
 
             <div className={`${ourWorkstyles['our-work__grid']} `}>
-                <div></div>
-                <div className={`${ourWorkstyles['content__dash']} `}></div>
-                <div></div>
                 <aside
                     className={`${ourWorkstyles['content__web-dev-aside']} `}
                 >
@@ -103,7 +100,6 @@ export const OurWork = () => {
                         alt="image of a smartphone display the google homepage"
                     />
                 </aside>
-                <div className={`${ourWorkstyles['content__dash']} `}></div>
                 <Content
                     title={WebSectionTitle()}
                     body={mockData[0].body}
@@ -117,7 +113,6 @@ export const OurWork = () => {
                     buttonText={mockData[1].buttonText}
                     alignment="right"
                 />
-                <div className={`${ourWorkstyles['content__dash']} `}></div>
                 <aside
                     className={`${ourWorkstyles['content__seo-image-aside']} `}
                 >
