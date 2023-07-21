@@ -3,6 +3,8 @@ import { PropsWithChildren, useState } from 'react'
 import styles from './Navbar.module.scss'
 import { ArrowIcon } from '../ArrowIcon/ArrowIcon'
 import { Row } from '../Row/Row'
+import Image from 'next/image'
+import dlpLogo from '../../../../public/dlp-logo.svg'
 
 interface NavbarProps extends PropsWithChildren {
     logoUrl: string
@@ -45,8 +47,8 @@ export const Navbar = ({ links, logoUrl }: NavbarProps): JSX.Element => {
         <div className={styles.navbar}>
             <Row variant="between">
                 <div className={styles['navbar__logo']}>
-                    <img
-                        src="/dlp-logo.svg"
+                    <Image
+                        src={dlpLogo}
                         alt="logo for Digital Litigation Partners"
                     />
                 </div>

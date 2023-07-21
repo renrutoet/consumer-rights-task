@@ -1,4 +1,9 @@
 import { ReactNode } from 'react'
+import Image from 'next/image'
+import wordpressLogo from '../../../../../public/wordpress-logo.svg'
+import reactLogo from '../../../../../public/react-logo.svg'
+import gatsbyLogo from '../../../../../public/gatsby-logo.svg'
+import phoneImage from '../../../../../public/dlp-phone.png'
 import pageStyles from '../../../styles/Page.module.scss'
 import textStyles from '../../../styles/text.module.scss'
 import ourWorkstyles from './OurWork.module.scss'
@@ -87,16 +92,16 @@ export const OurWork = () => {
                 <aside
                     className={`${ourWorkstyles['content__web-dev-aside']} `}
                 >
-                    <img
-                        src="/wordpress-logo.svg"
+                    <Image
+                        src={wordpressLogo}
                         alt="image of a smartphone display the google homepage"
                     />
-                    <img
-                        src="/react-logo.svg"
+                    <Image
+                        src={reactLogo}
                         alt="image of a smartphone display the google homepage"
                     />
-                    <img
-                        src="/gatsby-logo.svg"
+                    <Image
+                        src={gatsbyLogo}
                         alt="image of a smartphone display the google homepage"
                     />
                 </aside>
@@ -116,8 +121,8 @@ export const OurWork = () => {
                 <aside
                     className={`${ourWorkstyles['content__seo-image-aside']} `}
                 >
-                    <img
-                        src="/dlp-phone.png"
+                    <Image
+                        src={phoneImage}
                         alt="image of a smartphone display the google homepage"
                     />
                 </aside>

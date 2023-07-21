@@ -2,13 +2,18 @@ import contactStyles from './Contact.module.scss'
 import textStyles from '../../../styles/text.module.scss'
 import { Row } from '../../Row/Row'
 import { IconWrapper } from '../../Icon/Icon'
+import Image from 'next/image'
+import facebookIcon from '../../../../../public/icons/social-media-facebook-1.svg'
+import twitterIcon from '../../../../../public/icons/social-media-twitter.svg'
+import instagramIcon from '../../../../../public/icons/social-instagram.svg'
+import linkedinIcon from '../../../../../public/icons/professional-network-linkedin.svg'
 
 const mockSocialMediaData = [
     {
         link: '#',
         content: (
-            <img
-                src="/icons/social-media-facebook-1.svg"
+            <Image
+                src={facebookIcon}
                 alt="facebook link icon"
                 className={contactStyles['icon--link']}
             />
@@ -17,8 +22,8 @@ const mockSocialMediaData = [
     {
         link: '#',
         content: (
-            <img
-                src="/icons/social-media-twitter.svg"
+            <Image
+                src={twitterIcon}
                 alt="twitter link icon"
                 className={contactStyles['icon--link']}
             />
@@ -27,8 +32,8 @@ const mockSocialMediaData = [
     {
         link: '#',
         content: (
-            <img
-                src="/icons/social-instagram.svg"
+            <Image
+                src={instagramIcon}
                 alt="instagram link icon"
                 className={contactStyles['icon--link']}
             />
@@ -37,8 +42,8 @@ const mockSocialMediaData = [
     {
         link: '#',
         content: (
-            <img
-                src="/icons/professional-network-linkedin.svg"
+            <Image
+                src={linkedinIcon}
                 alt="linkedin link icon"
                 className={contactStyles['icon--link']}
             />

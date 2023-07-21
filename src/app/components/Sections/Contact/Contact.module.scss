@@ -87,10 +87,12 @@
 .icon {
     aspect-ratio: 1/1;
     width: 100%;
+    height: auto;
 
     &--small {
         @extend.icon;
         width: 40%;
+        height: auto;
     }
 
     &--link:hover {

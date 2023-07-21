@@ -1,13 +1,17 @@
+import Image from 'next/image'
 import { IconWrapper } from '../../Icon/Icon'
 import { Row } from '../../Row/Row'
 import contactStyles from './Contact.module.scss'
+import phoneIcon from '../../../../../public/icons/phone-incoming-call.svg'
+import houseIcon from '../../../../../public/icons/house-chimney-2.svg'
+import emailIcon from '../../../../../public/icons/send-email-1.svg'
 
 const mockContactMethodData = [
     {
         text: '0151 111 2222',
         content: (
-            <img
-                src="/icons/phone-incoming-call.svg"
+            <Image
+                src={phoneIcon}
                 alt="phone number icon"
                 className={contactStyles['icon--small']}
             />
@@ -16,8 +20,8 @@ const mockContactMethodData = [
     {
         text: '123 Address Street, L1 2XY',
         content: (
-            <img
-                src="/icons/house-chimney-2.svg"
+            <Image
+                src={houseIcon}
                 alt="address icon"
                 className={contactStyles['icon--small']}
             />
@@ -26,8 +30,8 @@ const mockContactMethodData = [
     {
         text: 'info@dlp.com',
         content: (
-            <img
-                src="/icons/send-email-1.svg"
+            <Image
+                src={emailIcon}
                 alt="email icon"
                 className={contactStyles['icon--small']}
             />
