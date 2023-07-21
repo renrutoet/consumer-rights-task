@@ -8,11 +8,21 @@
     text-align: center;
 }
 
+.font-primary {
+    font-family: $font-source-sans-3;
+    color: $primary-white;
+
+    &--italic {
+        @extend .font-primary;
+        font-style: italic;
+    }
+}
 .font-secondary {
     font-family: $font-playfair-display;
     color: $primary-white;
 
     &--italic {
+        @extend .font-secondary;
         font-style: italic;
     }
 }
