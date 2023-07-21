@@ -2,6 +2,7 @@ import { Icon } from '../../Icon/Icon'
 import pageStyles from '../../../styles/Page.module.scss'
 import textStyles from '../../../styles/text.module.scss'
 import contactStyles from './Contact.module.scss'
+import { Row } from '../../Row/Row'
 
 const mockData = [
     {
@@ -42,17 +43,19 @@ export const Contact = () => {
             className={`${pageStyles.section} ${contactStyles['get-in-touch']} `}
         >
             <div className={`${contactStyles['contact-methods']} `}>
-                {mockData
-                    ? mockData.map((iconData, index) => {
-                          return (
-                              <Icon
-                                  key={`contact-methods-${index}`}
-                                  text={iconData.text}
-                                  content={iconData.content}
-                              />
-                          )
-                      })
-                    : null}
+                <Row>
+                    {mockData
+                        ? mockData.map((iconData, index) => {
+                              return (
+                                  <Icon
+                                      key={`contact-methods-${index}`}
+                                      text={iconData.text}
+                                      content={iconData.content}
+                                  />
+                              )
+                          })
+                        : null}
+                </Row>
             </div>
             <div className={`${contactStyles['contact']} `}>
                 <h4 className={`${contactStyles['contact__title']} `}>
@@ -84,7 +87,18 @@ export const Contact = () => {
                 </p>
             </div>
             <div className={`${contactStyles['footer-details']} `}>
-                Footer details
+                <Row>
+                    <div>Logo</div>
+                    <div>Logo</div>
+                    <div>Logo</div>
+                    <div>Logo</div>
+                </Row>
+                <p
+                    className={`${textStyles['font-secondary']} ${textStyles['font-secondary--italic']} ${textStyles['text-center']}`}
+                >
+                    Copyright © 2019 Digital Litigation Partners. All rights
+                    reserved. | Terms & Condtitions | Privacy Policy
+                </p>
             </div>
         </section>
     )

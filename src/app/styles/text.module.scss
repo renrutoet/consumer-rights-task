@@ -1,3 +1,18 @@
+@import './variables.scss';
+
 .faded {
     opacity: 25%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-secondary {
+    font-family: $font-playfair-display;
+    color: $primary-white;
+
+    &--italic {
+        font-style: italic;
+    }
 }

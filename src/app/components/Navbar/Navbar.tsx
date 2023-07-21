@@ -2,6 +2,7 @@ import { linksType } from '../../data/mockHeroData'
 import { PropsWithChildren, useState } from 'react'
 import styles from './Navbar.module.scss'
 import { ArrowIcon } from '../ArrowIcon/ArrowIcon'
+import { Row } from '../Row/Row'
 
 interface NavbarProps extends PropsWithChildren {
     logoUrl: string
@@ -42,23 +43,25 @@ const NavItem = ({ text, linkUrl }: NavItemProps): JSX.Element => {
 export const Navbar = ({ links, logoUrl }: NavbarProps): JSX.Element => {
     return (
         <div className={styles.navbar}>
-            <div className={styles['navbar__logo']}>
-                <img
-                    src="/dlp-logo.svg"
-                    alt="logo for Digital Litigation Partners"
-                />
-            </div>
-            <ul className={styles['navbar__links']}>
-                {links.map((link, index) => {
-                    return (
-                        <NavItem
-                            key={`navbar-item-${index}`}
-                            text={link.text}
-                            linkUrl={link.url}
-                        />
-                    )
-                })}
-            </ul>
+            <Row variant="between">
+                <div className={styles['navbar__logo']}>
+                    <img
+                        src="/dlp-logo.svg"
+                        alt="logo for Digital Litigation Partners"
+                    />
+                </div>
+                <ul className={styles['navbar__links']}>
+                    {links.map((link, index) => {
+                        return (
+                            <NavItem
+                                key={`navbar-item-${index}`}
+                                text={link.text}
+                                linkUrl={link.url}
+                            />
+                        )
+                    })}
+                </ul>
+            </Row>
         </div>
     )
 }

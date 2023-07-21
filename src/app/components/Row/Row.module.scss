@@ -1,0 +1,12 @@
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+
+    &--between {
+        @extend .row;
+        justify-content: space-between;
+    }
+}
