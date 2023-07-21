@@ -29,7 +29,11 @@
         text-decoration: none;
         
         &:hover {
+            transition: all 0.2s ease-in;
             border-bottom: 1px solid $primary-white;
+        }
+        &:not(:hover) {
+            transition: all 0.2s ease-out;
         }
     }
 }

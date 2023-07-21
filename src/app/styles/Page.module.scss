@@ -36,9 +36,14 @@
   }
 
   &:hover {
-      background-color: $primary-white;
-      color: $primary-black;
-      transition: all 0.3s ease;
+    transition: all 0.2s ease-in;
+    transform: scale(1.05);
+    background-color: $primary-white;
+    color: $primary-black;
+  }
+  &:not(:hover) {
+    transition: all 0.2s ease-in;
   }
 }
+
 
