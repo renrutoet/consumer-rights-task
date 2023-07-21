@@ -54,13 +54,13 @@ export const Contact = () => {
                       })
                     : null}
             </div>
-            <div className={`${contactStyles['contact-form']} `}>
-                <h4 className={`${contactStyles['contact-form__title']} `}>
+            <div className={`${contactStyles['contact']} `}>
+                <h4 className={`${contactStyles['contact__title']} `}>
                     Enquire online
                 </h4>
-                <div className={`${contactStyles['contact-form__form']} `}>
+                <div className={`${contactStyles['contact__form']} `}>
                     <div
-                        className={`${contactStyles['contact-form__left-column']}`}
+                        className={`${contactStyles['contact__form__left-column']}`}
                     >
                         <input type="text" placeholder="Name" />
                         <input type="text" placeholder="Email address" />
@@ -73,10 +73,10 @@ export const Contact = () => {
                     </div>
                     <textarea
                         placeholder="Message"
-                        className={`${contactStyles['contact-form__form__message']} `}
+                        className={`${contactStyles['contact__form__message']} `}
                     />
                 </div>
-                <p className={`${contactStyles['contact-form__legal']}`}>
+                <p className={`${contactStyles['contact__legal']}`}>
                     *By pressing send you consent to Digital Litigation Partners
                     collecting your submitted information in order to respond to
                     your enquiry. For more information view our{' '}
