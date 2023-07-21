@@ -4,11 +4,13 @@ import { Source_Sans_3, Playfair_Display } from 'next/font/google'
 
 const sourceSans = Source_Sans_3({
     subsets: ['latin'],
+    style: ['normal', 'italic'],
     variable: '--font-source-sans-3',
     display: 'swap',
 })
 const playfair = Playfair_Display({
     subsets: ['latin'],
+    style: ['normal', 'italic'],
     variable: '--font-playfair-display',
     display: 'swap',
 })
