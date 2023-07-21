@@ -4,18 +4,17 @@ import styles from './Icon.module.scss'
 interface IconProps extends PropsWithChildren {
     text?: string
     circle?: boolean
-    content: ReactNode
 }
 
-export const Icon = ({
+export const IconWrapper = ({
     text,
-    content,
+    children,
     circle = false,
 }: IconProps): JSX.Element => {
     return (
         <div className={`${styles['c-icon__container']} `}>
             <div className={circle ? `${styles['c-icon__circle']} ` : ''}>
-                {content}
+                {children}
             </div>
             {text ? (
                 <div className={`${styles['c-icon__text']} `}>{text}</div>

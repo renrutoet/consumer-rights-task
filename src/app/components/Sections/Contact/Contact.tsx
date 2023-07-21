@@ -1,4 +1,4 @@
-import { Icon } from '../../Icon/Icon'
+import { IconWrapper } from '../../Icon/Icon'
 import pageStyles from '../../../styles/Page.module.scss'
 import textStyles from '../../../styles/text.module.scss'
 import contactStyles from './Contact.module.scss'
@@ -90,12 +90,13 @@ export const Contact = () => {
                     {mockContactMethodData
                         ? mockContactMethodData.map((iconData, index) => {
                               return (
-                                  <Icon
+                                  <IconWrapper
                                       key={`contact-methods-${index}`}
                                       text={iconData.text}
-                                      content={iconData.content}
                                       circle
-                                  />
+                                  >
+                                      {iconData.content}
+                                  </IconWrapper>
                               )
                           })
                         : null}
@@ -139,7 +140,9 @@ export const Contact = () => {
                                       key={`social-media-${index}`}
                                       href={socialLink.link}
                                   >
-                                      <Icon content={socialLink.content} />
+                                      <IconWrapper>
+                                          {socialLink.content}
+                                      </IconWrapper>
                                   </a>
                               )
                           })
