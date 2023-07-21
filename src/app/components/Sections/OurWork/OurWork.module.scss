@@ -1,20 +1,20 @@
+@import '../../../styles/variables.scss';
+
 .our-work {
     background-image: url('/dlp-laptop.png'), url('/dlp-block-background.jpg');
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: 30%, cover;
+    background-size: 45%, cover;
 }
 
 .our-work__grid {
     display: grid;
 
-    // height: 100%;
     grid-template-columns: calc(50% - 1px) 2px calc(50% - 1px);
     grid-template-rows: auto;
 
     & > div {
         color: white;
-        // background-color: #8ca0ff;
         width: 100%;
         height: 100%;
     }
@@ -47,8 +47,39 @@
         font-weight: 400;
     }
 
+    &__background-text {
+        display: block;
+        position: absolute;
+        height: 100%;
+        margin-top: 10%;
+        left: 50%;
+        line-height: 0.25;
+
+        user-select: none;
+        writing-mode: vertical-rl;
+
+        @include faded-background-text();
+    }
+
     &__dash {
-        border-left: 1px dashed white;
+        border-left: 1px dashed rgba(255, 255, 255, 0.25);
+    }
+
+    &__seo-image-aside {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__web-dev-aside {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-inline: 4rem;
+
+        & img {
+            margin: 1rem;
+            opacity: 0.5;
+        }
     }
 
     &--left {

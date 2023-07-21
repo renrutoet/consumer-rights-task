@@ -79,11 +79,30 @@ const Content = ({
 export const OurWork = () => {
     return (
         <section className={`${ourWorkstyles['our-work']} `}>
+            <div className={`${ourWorkstyles['content__background-text']}`}>
+                Digital Marketing
+            </div>
+
             <div className={`${ourWorkstyles['our-work__grid']} `}>
                 <div></div>
                 <div className={`${ourWorkstyles['content__dash']} `}></div>
                 <div></div>
-                <div>TECH ICONS</div>
+                <aside
+                    className={`${ourWorkstyles['content__web-dev-aside']} `}
+                >
+                    <img
+                        src="/wordpress-logo.svg"
+                        alt="image of a smartphone display the google homepage"
+                    />
+                    <img
+                        src="/react-logo.svg"
+                        alt="image of a smartphone display the google homepage"
+                    />
+                    <img
+                        src="/gatsby-logo.svg"
+                        alt="image of a smartphone display the google homepage"
+                    />
+                </aside>
                 <div className={`${ourWorkstyles['content__dash']} `}></div>
                 <Content
                     title={WebSectionTitle()}
@@ -99,7 +118,14 @@ export const OurWork = () => {
                     alignment="right"
                 />
                 <div className={`${ourWorkstyles['content__dash']} `}></div>
-                <div>PHONE IMAGE</div>
+                <aside
+                    className={`${ourWorkstyles['content__seo-image-aside']} `}
+                >
+                    <img
+                        src="/dlp-phone.png"
+                        alt="image of a smartphone display the google homepage"
+                    />
+                </aside>
             </div>
         </section>
     )
