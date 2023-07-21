@@ -4,14 +4,14 @@ import textStyles from '../../../styles/text.module.scss'
 import contactStyles from './Contact.module.scss'
 import { Row } from '../../Row/Row'
 
-const mockData = [
+const mockContactMethodData = [
     {
         text: '0151 111 2222',
         content: (
             <img
                 src="/icons/phone-incoming-call.svg"
                 alt="phone number icon"
-                className={contactStyles.icons}
+                className={contactStyles['icon--small']}
             />
         ),
     },
@@ -21,7 +21,7 @@ const mockData = [
             <img
                 src="/icons/house-chimney-2.svg"
                 alt="address icon"
-                className={contactStyles.icons}
+                className={contactStyles['icon--small']}
             />
         ),
     },
@@ -31,7 +31,50 @@ const mockData = [
             <img
                 src="/icons/send-email-1.svg"
                 alt="email icon"
-                className={contactStyles.icons}
+                className={contactStyles['icon--small']}
+            />
+        ),
+    },
+]
+
+const mockSocialMediaData = [
+    {
+        link: '#',
+        content: (
+            <img
+                src="/icons/social-media-facebook-1.svg"
+                alt="facebook link icon"
+                className={contactStyles['icon--link']}
+            />
+        ),
+    },
+    {
+        link: '#',
+        content: (
+            <img
+                src="/icons/social-media-twitter.svg"
+                alt="twitter link icon"
+                className={contactStyles['icon--link']}
+            />
+        ),
+    },
+    {
+        link: '#',
+        content: (
+            <img
+                src="/icons/social-instagram.svg"
+                alt="instagram link icon"
+                className={contactStyles['icon--link']}
+            />
+        ),
+    },
+    {
+        link: '#',
+        content: (
+            <img
+                src="/icons/professional-network-linkedin.svg"
+                alt="linkedin link icon"
+                className={contactStyles['icon--link']}
             />
         ),
     },
@@ -44,13 +87,14 @@ export const Contact = () => {
         >
             <div className={`${contactStyles['contact-methods']} `}>
                 <Row>
-                    {mockData
-                        ? mockData.map((iconData, index) => {
+                    {mockContactMethodData
+                        ? mockContactMethodData.map((iconData, index) => {
                               return (
                                   <Icon
                                       key={`contact-methods-${index}`}
                                       text={iconData.text}
                                       content={iconData.content}
+                                      circle
                                   />
                               )
                           })
@@ -88,10 +132,18 @@ export const Contact = () => {
             </div>
             <div className={`${contactStyles['footer-details']} `}>
                 <Row>
-                    <div>Logo</div>
-                    <div>Logo</div>
-                    <div>Logo</div>
-                    <div>Logo</div>
+                    {mockSocialMediaData
+                        ? mockSocialMediaData.map((socialLink, index) => {
+                              return (
+                                  <a
+                                      key={`social-media-${index}`}
+                                      href={socialLink.link}
+                                  >
+                                      <Icon content={socialLink.content} />
+                                  </a>
+                              )
+                          })
+                        : null}
                 </Row>
                 <p
                     className={`${textStyles['font-secondary']} ${textStyles['font-secondary--italic']} ${textStyles['text-center']}`}

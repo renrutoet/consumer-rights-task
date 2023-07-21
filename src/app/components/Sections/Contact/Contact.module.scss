@@ -14,6 +14,7 @@
 
 .contact-methods {
     width: 50%;
+    height: 20%;
     padding: 2rem;
 
     color: $primary-white;
@@ -27,6 +28,9 @@
     width: 50%;
     text-align: center;
     color: $primary-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__title {
         font-style: italic;
@@ -72,7 +76,7 @@
 }
 
 .footer-details {
-    width: 50%;
+    height: 300px;
 
     & p {
         font-size: 0.75rem;
@@ -80,7 +84,21 @@
     }
 }
 
-.icons {
+.icon {
     aspect-ratio: 1/1;
-    width: 40%;
+    width: 100%;
+
+    &--small {
+        @extend.icon;
+        width: 40%;
+    }
+
+    &--link:hover {
+        transition: all 0.2s ease-in;
+        transform: scale(1.2);
+    }
+
+    &--link:not(:hover) {
+        transition: all 0.2s ease-in;
+    }
 }
