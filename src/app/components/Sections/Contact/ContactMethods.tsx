@@ -6,6 +6,7 @@ import pageStyles from '../../../styles/Page.module.scss'
 import phoneIcon from '../../../../../public/icons/phone-incoming-call.svg'
 import houseIcon from '../../../../../public/icons/house-chimney-2.svg'
 import emailIcon from '../../../../../public/icons/send-email-1.svg'
+import { Circle } from '../../Circle/Circle'
 
 const mockContactMethodData = [
     {
@@ -69,9 +70,10 @@ export const ContactMethods = (): JSX.Element => {
             </div>
             <div>
                 <div
-                    className={`${pageStyles['centered-dash--bottom']} ${pageStyles['centered-dash--relative']}`}
+                    className={`${pageStyles['centered-dash--bottom']} ${pageStyles['centered-dash--relative']} ${pageStyles['centered-dash--solid']}`}
                 ></div>
             </div>
+            <Circle greyScale />
         </>
     )
 }
