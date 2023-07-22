@@ -1,9 +1,51 @@
 @import '../../../styles/variables.scss';
 
 .what-we-do {
+    position: relative;
+    overflow: hidden;
+    padding-block: 5rem;
+
     background-color: $dlp-light;
     z-index: 1;
     color: $primary-white;
+}
+
+.top {
+    display: grid;
+
+    width: 100%;
+
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    gap: 2rem;
+
+    &__grid--top-left {
+        background-color: $primary-white;
+        display: block;
+        position: relative;
+        height: 5px;
+        width: 25%;
+        top: 100%;
+    }
+    &__grid--top-right {
+        line-height: 2rem;
+    }
+    &__grid--bottom-left {
+        line-height: 3.5rem;
+    }
+
+    &__grid--bottom-right {
+        margin: auto;
+        margin-top: 4rem;
+        height: 100%;
+        width: 60%;
+        display: flex;
+    }
+}
+
+.middle {
+    width: 100%;
+    margin-block: 10rem;
 }
 
 .bottom {

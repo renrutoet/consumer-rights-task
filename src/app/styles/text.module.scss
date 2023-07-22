@@ -8,21 +8,38 @@
     text-align: center;
 }
 
-.font-primary {
-    font-family: $font-source-sans-3;
-    color: $primary-white;
+.align-bottom {
+    vertical-align: bottom;
+}
+
+.font {
+    &--primary {
+        font-family: $font-source-sans-3;
+        color: $primary-white;
+    }
+
+    &--secondary {
+        font-family: $font-playfair-display;
+        color: $primary-white;
+    }
 
     &--italic {
-        @extend .font-primary;
         font-style: italic;
     }
-}
-.font-secondary {
-    font-family: $font-playfair-display;
-    color: $primary-white;
 
-    &--italic {
-        @extend .font-secondary;
-        font-style: italic;
+    &--regular {
+        font-weight: 400;
+    }
+
+    &--bold {
+        font-weight: 800;
+    }
+
+    &--size-large {
+        font-size: 3rem;
+    }
+
+    &--size-xlarge {
+        font-size: 5rem;
     }
 }

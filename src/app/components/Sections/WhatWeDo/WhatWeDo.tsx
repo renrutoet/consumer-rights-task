@@ -28,33 +28,70 @@ const mockIconData = [
 
 export const WhatWeDo = (): JSX.Element => {
     return (
-        <section
-            className={`${pageStyles.section} ${whatWeDoStyles['what-we-do']}`}
-        >
+        <section className={`${whatWeDoStyles['what-we-do']}`}>
             <SplitBackground text="Automation" />
             <Column classes={['flex-column--width-60']}>
-                <div>
-                    <div>TEST</div>
-                    <div>TEST</div>
-                    <div>TEST</div>
+                <div className={`${whatWeDoStyles['top']}`}>
+                    <div
+                        className={`${whatWeDoStyles['top__grid--top-left']} `}
+                    ></div>
+                    <div
+                        className={`${whatWeDoStyles['top__grid--top-right']} ${textStyles['font--secondary']} ${textStyles['font--regular']}`}
+                    >
+                        Nulla non ligula efficitur, venenatis leo a, aliquam
+                        eros. Vivamus vitae dictum nisi. Aliquam at arcu orci.
+                        Cras sapien mauris, facilisis ut enim ut, pharetra
+                        interdum felis. Proin id ante ante. Maecenas sodales
+                        ultrices ornare. Duis commodo sem et volutpat malesuada.
+                        Duis elit mi, interdum id posuere ut, semper elementum
+                        turpis. Sed varius volutpat quam id maximus.
+                    </div>
+                    <h4
+                        className={`${whatWeDoStyles['top__grid--bottom-left']} ${textStyles['font--primary']} ${textStyles['font--bold']} ${textStyles['font--size-large']}`}
+                    >
+                        Automate{' '}
+                        <span
+                            className={` ${textStyles['font--secondary']} ${textStyles['font--bold']}`}
+                        >
+                            <em>your </em>
+                        </span>
+                        <br />
+                        <span className={` ${textStyles['font--size-xlarge']}`}>
+                            business
+                        </span>
+                    </h4>
+                    <div
+                        className={`${whatWeDoStyles['top__grid--bottom-right']} ${textStyles['font--primary']} ${textStyles['font--regular']}`}
+                    >
+                        Donec efficitur velit erat, eget facilisis massa gravida
+                        eget. Morbi varius dolor ut lectus fringilla, in euismod
+                        sapien tempor. Donec massa tellus, cursus sit amet sem
+                        ut, pellentesque scelerisque purus. Morbi a consectetur
+                        ipsum. Sed metus risus, imperdiet in lorem vitae,
+                        vestibulum convallis nunc. Donec sed eros augue. Aliquam
+                        aliquet velit eget massa luctus, quis consectetur ex
+                        interdum.{' '}
+                    </div>
                 </div>
-                <Row height="eighth">
-                    {mockIconData
-                        ? mockIconData.map((iconData, index) => {
-                              return (
-                                  <IconWrapper
-                                      key={`what-we-do-icons-${index}`}
-                                      circle
-                                  >
-                                      {iconData.content}
-                                  </IconWrapper>
-                              )
-                          })
-                        : null}
-                </Row>
+                <div className={`${whatWeDoStyles.middle}`}>
+                    <Row height="eighth">
+                        {mockIconData
+                            ? mockIconData.map((iconData, index) => {
+                                  return (
+                                      <IconWrapper
+                                          key={`what-we-do-icons-${index}`}
+                                          circle
+                                      >
+                                          {iconData.content}
+                                      </IconWrapper>
+                                  )
+                              })
+                            : null}
+                    </Row>
+                </div>
                 <div className={`${whatWeDoStyles.bottom}`}>
                     <h4
-                        className={`${textStyles['font-primary']} ${whatWeDoStyles['bottom__heading']}`}
+                        className={`${textStyles['font--primary']} ${whatWeDoStyles['bottom__heading']}`}
                     >
                         Vestibulum{' '}
                         <em>
@@ -66,7 +103,7 @@ export const WhatWeDo = (): JSX.Element => {
                         </span>{' '}
                         quam venenatis?
                     </h4>
-                    <div className={`${textStyles['font-primary']}`}>
+                    <div className={`${textStyles['font--primary']}`}>
                         Etiam elementum efficitur auctor. Duis tempor nisi ut
                         risus pellentesque posuere. Fusce vehicula massa at
                         sodales porta. Proin sodales, mauris ac blandit

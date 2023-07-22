@@ -31,7 +31,7 @@ interface ContentProps {
 const WebSectionTitle = (): JSX.Element => {
     return (
         <h4
-            className={`${textStyles['font-primary']} ${ourWorkstyles['content__title']}`}
+            className={`${textStyles['font--primary']} ${ourWorkstyles['content__title']}`}
         >
             <em>Web </em>
             <span className={`${textStyles['font-secondary']}`}>
@@ -44,7 +44,7 @@ const WebSectionTitle = (): JSX.Element => {
 const SEOSectionTitle = (): JSX.Element => {
     return (
         <h4
-            className={`${textStyles['font-primary']} ${ourWorkstyles['content__title']}`}
+            className={`${textStyles['font--primary']} ${ourWorkstyles['content__title']}`}
         >
             <em>Search </em>
             <span className={`${textStyles['font-secondary']}`}>
@@ -68,7 +68,7 @@ const Content = ({
         <div className={containerClass}>
             {title}
             <div
-                className={`${textStyles['font-primary']} ${ourWorkstyles['content__body']}`}
+                className={`${textStyles['font--primary']} ${ourWorkstyles['content__body']}`}
             >
                 {body}
             </div>
