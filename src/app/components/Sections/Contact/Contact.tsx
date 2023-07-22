@@ -8,9 +8,12 @@ import { ContactFooter } from './ContactFooter'
 
 export const Contact = () => {
     return (
-        <section
-            className={`${pageStyles.section} ${contactStyles['get-in-touch']} `}
-        >
+        <section className={`${contactStyles['get-in-touch']} `}>
+            <div>
+                <div
+                    className={`${pageStyles['centered-dash--top']} ${pageStyles['centered-dash--relative']}`}
+                ></div>
+            </div>
             <Image
                 alt="faint image of office"
                 src={dlpFooter}

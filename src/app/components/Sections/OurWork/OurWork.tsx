@@ -80,6 +80,7 @@ const Content = ({
 export const OurWork = () => {
     return (
         <section className={`${ourWorkstyles['our-work']} `}>
+            <div className={`${pageStyles['centered-dash']}`}></div>
             <div className={`${ourWorkstyles['content__background-text']}`}>
                 Digital Marketing
             </div>

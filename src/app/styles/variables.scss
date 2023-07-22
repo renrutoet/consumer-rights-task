@@ -12,10 +12,18 @@ $font-source-sans-3: var(--font-source-sans-3);
     border: none;
 }
 
+@mixin position-centered() {
+    display: block;
+    position: absolute;
+    height: 100%;
+    left: 50%;
+}
+
 @mixin faded-background-text {
     color: $primary-white;
-    opacity: 25%;
+    opacity: 10%;
     font-size: 10rem;
     font-style: italic;
     font-family: $font-playfair-display;
+    user-select: none;
 }

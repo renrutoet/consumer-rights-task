@@ -50,19 +50,13 @@
     }
 
     &__background-text {
-        display: block;
-        position: absolute;
-        height: 100%;
+        @include position-centered();
         padding-top: 15%;
-        left: 50%;
-        line-height: 0.25;
 
-        user-select: none;
+        line-height: 0.25;
         writing-mode: vertical-rl;
 
         @include faded-background-text();
-
-        border-left: 1px dashed rgba(255, 255, 255, 0.5);
     }
 
     &__seo-image-aside {

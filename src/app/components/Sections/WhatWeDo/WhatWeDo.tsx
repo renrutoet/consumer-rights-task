@@ -116,6 +116,9 @@ export const WhatWeDo = (): JSX.Element => {
                     </button>
                 </div>
             </Column>
+            <div
+                className={`${pageStyles['centered-dash--bottom']} ${pageStyles['centered-dash--relative']}`}
+            ></div>
         </section>
     )
 }

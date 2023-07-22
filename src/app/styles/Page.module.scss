@@ -34,3 +34,23 @@
         transition: all 0.2s ease-in;
     }
 }
+
+.centered-dash {
+    @include position-centered();
+    border-left: 1px dashed rgba(255, 255, 255, 0.25);
+
+    &--top {
+        @extend .centered-dash;
+        padding-top: 5rem;
+    }
+
+    &--bottom {
+        @extend .centered-dash;
+        padding-bottom: 5rem;
+    }
+
+    &--relative {
+        @extend .centered-dash;
+        position: relative;
+    }
+}
