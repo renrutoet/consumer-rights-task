@@ -53,29 +53,31 @@ const mockSocialMediaData = [
 
 export const ContactFooter = () => {
     return (
-        <div className={`${contactStyles['footer-details']} `}>
-            <Row fullHeight>
-                {mockSocialMediaData
-                    ? mockSocialMediaData.map((socialLink, index) => {
-                          return (
-                              <a
-                                  key={`social-media-${index}`}
-                                  href={socialLink.link}
-                              >
-                                  <IconWrapper>
-                                      {socialLink.content}
-                                  </IconWrapper>
-                              </a>
-                          )
-                      })
-                    : null}
-            </Row>
-            <p
-                className={`${textStyles['font-secondary']} ${textStyles['font-secondary--italic']} ${textStyles['text-center']}`}
-            >
-                Copyright © 2019 Digital Litigation Partners. All rights
-                reserved. | Terms & Condtitions | Privacy Policy
-            </p>
-        </div>
+        <>
+            <div className={`${contactStyles['footer-details']} `}>
+                <Row height="full">
+                    {mockSocialMediaData
+                        ? mockSocialMediaData.map((socialLink, index) => {
+                              return (
+                                  <a
+                                      key={`social-media-${index}`}
+                                      href={socialLink.link}
+                                  >
+                                      <IconWrapper>
+                                          {socialLink.content}
+                                      </IconWrapper>
+                                  </a>
+                              )
+                          })
+                        : null}
+                </Row>
+                <p
+                    className={`${textStyles['font--secondary']} ${textStyles['font--italic']} ${textStyles['text-center']}`}
+                >
+                    Copyright © 2019 Digital Litigation Partners. All rights
+                    reserved. | Terms & Condtitions | Privacy Policy
+                </p>
+            </div>
+        </>
     )
 }
