@@ -45,7 +45,7 @@ const NavItem = ({ text, linkUrl }: NavItemProps): JSX.Element => {
 export const Navbar = ({ links, logoUrl }: NavbarProps): JSX.Element => {
     return (
         <div className={styles.navbar}>
-            <Row variant="between">
+            <Row justifyContent="between">
                 <div className={styles['navbar__logo']}>
                     <Image
                         src={dlpLogo}

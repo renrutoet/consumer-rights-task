@@ -54,7 +54,7 @@ const mockSocialMediaData = [
 export const ContactFooter = () => {
     return (
         <div className={`${contactStyles['footer-details']} `}>
-            <Row>
+            <Row fullHeight>
                 {mockSocialMediaData
                     ? mockSocialMediaData.map((socialLink, index) => {
                           return (

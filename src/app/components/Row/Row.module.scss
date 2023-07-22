@@ -3,10 +3,13 @@
     align-items: center;
     justify-content: space-evenly;
 
-    height: 100%;
-
     &--between {
         @extend .row;
         justify-content: space-between;
+    }
+
+    &--full-height {
+        @extend .row;
+        height: 100%;
     }
 }
