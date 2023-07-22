@@ -5,6 +5,7 @@
     background-position: top left;
     background-repeat: no-repeat;
     background-size: 45%, cover;
+    position: relative;
 }
 
 .our-work__grid {
@@ -51,7 +52,7 @@
     &__background-text {
         display: block;
         position: absolute;
-        height: 200%;
+        height: 100%;
         padding-top: 15%;
         left: 50%;
         line-height: 0.25;
