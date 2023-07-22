@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.outer-circle {
+    aspect-ratio: 1/1;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+
+    border: 1px solid $dlp-sage;
+
+    &--greyscale {
+        @extend .outer-circle;
+        border: 1px solid gray;
+    }
+}
+
+.inner-circle {
+    height: 100%;
+    border-radius: 50%;
+
+    background-color: $dlp-sage;
+
+    &--greyscale {
+        @extend .inner-circle;
+        background-color: gray;
+    }
+}
+
+.center-dot {
+    position: relative;
+    aspect-ratio: 1/1;
+    height: 10%;
+
+    left: 45%;
+    top: 45%;
+
+    border-radius: 50%;
+
+    background-color: gray;
+
+    &--greyscale {
+        @extend .center-dot;
+        background-color: $dlp-dark;
+    }
+}
