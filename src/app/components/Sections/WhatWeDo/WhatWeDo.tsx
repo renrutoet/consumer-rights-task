@@ -119,7 +119,7 @@ export const WhatWeDo = (): JSX.Element => {
                             <u>interdum</u>
                         </em>{' '}
                         leo a dolor porta,{' '}
-                        <span className={`${textStyles['font-secondary']}`}>
+                        <span className={`${textStyles['font--secondary']}`}>
                             <em>sed maximus</em>
                         </span>{' '}
                         quam venenatis?

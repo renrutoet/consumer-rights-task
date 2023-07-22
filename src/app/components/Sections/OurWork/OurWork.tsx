@@ -35,7 +35,7 @@ const WebSectionTitle = (): JSX.Element => {
             className={`${textStyles['font--primary']} ${ourWorkstyles['content__title']}`}
         >
             <em>Web </em>
-            <span className={`${textStyles['font-secondary']}`}>
+            <span className={`${textStyles['font--secondary']}`}>
                 <em>design</em>
             </span>{' '}
             <p>and development</p>
@@ -48,7 +48,7 @@ const SEOSectionTitle = (): JSX.Element => {
             className={`${textStyles['font--primary']} ${ourWorkstyles['content__title']}`}
         >
             <em>Search </em>
-            <span className={`${textStyles['font-secondary']}`}>
+            <span className={`${textStyles['font--secondary']}`}>
                 <em>engine</em>
             </span>{' '}
             <p>optimization</p>

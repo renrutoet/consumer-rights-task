@@ -5,7 +5,7 @@ export const ContactForm = () => {
     return (
         <div className={`${contactStyles['contact']} `}>
             <h4 className={`${contactStyles['contact__title']} `}>
-                Enquire online
+                <em>Enquire online</em>
             </h4>
             <div className={`${contactStyles['contact__form']} `}>
                 <div
