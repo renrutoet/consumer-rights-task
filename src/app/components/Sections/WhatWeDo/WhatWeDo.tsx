@@ -10,6 +10,7 @@ import whatWeDoStyles from './WhatWeDo.module.scss'
 import { Column } from '../../Column/Column'
 import { Row } from '../../Row/Row'
 import { IconWrapper } from '../../Icon/Icon'
+import { Circle } from '../../Circle/Circle'
 
 const mockIconData = [
     {
@@ -73,8 +74,16 @@ export const WhatWeDo = (): JSX.Element => {
                         interdum.{' '}
                     </div>
                 </div>
+                <div
+                    className={`${whatWeDoStyles['border-details__top-offset']}`}
+                >
+                    <Circle />
+                </div>
+                <div
+                    className={`${whatWeDoStyles['border-details__top-offset__bottom']}`}
+                ></div>
                 <div className={`${whatWeDoStyles.middle}`}>
-                    <Row height="eighth">
+                    <Row>
                         {mockIconData
                             ? mockIconData.map((iconData, index) => {
                                   return (
@@ -88,7 +97,19 @@ export const WhatWeDo = (): JSX.Element => {
                               })
                             : null}
                     </Row>
+                    <div
+                        className={`${whatWeDoStyles['border-details__top']}`}
+                    ></div>
+                    <div
+                        className={`${whatWeDoStyles['border-details__bottom']}`}
+                    ></div>
                 </div>
+                <div className={`${whatWeDoStyles['border-details__offset']}`}>
+                    <div
+                        className={`${pageStyles['centered-dash--bottom']} ${pageStyles['centered-dash--relative']} ${pageStyles['centered-dash--solid']}`}
+                    ></div>
+                </div>
+                <Circle />
                 <div className={`${whatWeDoStyles.bottom}`}>
                     <h4
                         className={`${textStyles['font--primary']} ${whatWeDoStyles['bottom__heading']}`}
