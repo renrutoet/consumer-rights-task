@@ -11,6 +11,7 @@
         width: 100%;
         height: 150%;
         background-color: $dlp-dark;
+        z-index: -1;
     }
 
     &__background-text {
@@ -22,6 +23,7 @@
         writing-mode: vertical-rl;
 
         @include faded-background-text();
+        z-index: -2;
     }
 
     &__children {
