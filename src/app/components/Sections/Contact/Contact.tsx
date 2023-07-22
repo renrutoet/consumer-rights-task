@@ -11,7 +11,7 @@ export const Contact = () => {
         <section className={`${contactStyles['get-in-touch']} `}>
             <div>
                 <div
-                    className={`${pageStyles['centered-dash--top']} ${pageStyles['centered-dash--relative']}`}
+                    className={`${pageStyles['centered-dash--top']} ${pageStyles['centered-dash--relative']} ${pageStyles['centered-dash--solid']}`}
                 ></div>
             </div>
             <Image

@@ -49,6 +49,11 @@
         padding-bottom: 5rem;
     }
 
+    &--solid {
+        @extend .centered-dash;
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
     &--relative {
         @extend .centered-dash;
         position: relative;
