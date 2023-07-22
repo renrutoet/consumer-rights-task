@@ -3,7 +3,7 @@ import styles from './Row.module.scss'
 
 interface RowProps extends PropsWithChildren {
     justifyContent?: 'between'
-    height?: 'full' | 'eighth'
+    height?: 'full' | 'eighth' | 'normal'
 }
 
 export const Row = ({
@@ -19,6 +19,10 @@ export const Row = ({
 
     if (height === 'eighth') {
         classes.push(` ${styles[`row--eighth`]}`)
+    }
+
+    if (height === 'normal') {
+        classes.push(` ${styles[`row--normal`]}`)
     }
 
     if (justifyContent) {

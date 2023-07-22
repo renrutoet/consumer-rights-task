@@ -49,7 +49,7 @@ export const ContactMethods = (): JSX.Element => {
                     className={`${contactStyles['contact-methods__border-details--top']}`}
                 ></div>
 
-                <Row height="full">
+                <Row height="normal">
                     {mockContactMethodData
                         ? mockContactMethodData.map((iconData, index) => {
                               return (
