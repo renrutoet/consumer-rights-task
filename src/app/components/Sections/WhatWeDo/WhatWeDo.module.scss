@@ -1,0 +1,28 @@
+@import '../../../styles/variables.scss';
+
+.what-we-do {
+    background-color: $dlp-light;
+    z-index: 1;
+    color: $primary-white;
+}
+
+.bottom {
+    text-align: center;
+    padding-block: 1rem;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    &__heading {
+        font-size: 3rem;
+    }
+
+    & div {
+        padding-block: 2rem;
+        font-weight: 400;
+    }
+
+    & button {
+        margin-top: 2rem;
+    }
+}
