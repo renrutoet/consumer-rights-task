@@ -33,11 +33,9 @@ const WebSectionTitle = (): JSX.Element => {
         <h4
             className={`${textStyles['font-primary']} ${ourWorkstyles['content__title']}`}
         >
-            <span className={`${textStyles['font-primary--italic']}`}>
-                Web{' '}
-            </span>
-            <span className={`${textStyles['font-secondary--italic']}`}>
-                design
+            <em>Web </em>
+            <span className={`${textStyles['font-secondary']}`}>
+                <em>design</em>
             </span>{' '}
             <p>and development</p>
         </h4>
@@ -48,11 +46,9 @@ const SEOSectionTitle = (): JSX.Element => {
         <h4
             className={`${textStyles['font-primary']} ${ourWorkstyles['content__title']}`}
         >
-            <span className={`${textStyles['font-primary--italic']}`}>
-                Search{' '}
-            </span>
-            <span className={`${textStyles['font-secondary--italic']}`}>
-                engine
+            <em>Search </em>
+            <span className={`${textStyles['font-secondary']}`}>
+                <em>engine</em>
             </span>{' '}
             <p>optimization</p>
         </h4>
