@@ -22,7 +22,7 @@ $font-source-sans-3: var(--font-source-sans-3);
 @mixin faded-background-text {
     color: $primary-white;
     opacity: 10%;
-    font-size: 10rem;
+    font-size: 12rem;
     font-style: italic;
     font-family: $font-playfair-display;
     user-select: none;
