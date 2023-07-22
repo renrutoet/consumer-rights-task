@@ -83,6 +83,7 @@
 
     &--right {
         @extend .content;
+        padding-top: 10rem;
         text-align: end;
     }
 }

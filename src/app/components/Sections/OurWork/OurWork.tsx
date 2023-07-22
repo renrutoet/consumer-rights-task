@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { PropsWithChildren, ReactNode } from 'react'
 import Image from 'next/image'
 import wordpressLogo from '../../../../../public/wordpress-logo.svg'
 import reactLogo from '../../../../../public/react-logo.svg'
@@ -7,6 +7,7 @@ import phoneImage from '../../../../../public/dlp-phone.png'
 import pageStyles from '../../../styles/Page.module.scss'
 import textStyles from '../../../styles/text.module.scss'
 import ourWorkstyles from './OurWork.module.scss'
+import { Circle } from '../../Circle/Circle'
 
 const mockData = [
     {
@@ -84,6 +85,10 @@ export const OurWork = () => {
             <div className={`${ourWorkstyles['content__background-text']}`}>
                 Digital Marketing
             </div>
+            <div className={`${pageStyles['horizontal-graphic']}`}>
+                <div className={`${pageStyles['horizontal-dash']}`}></div>
+                <Circle greyScale />
+            </div>
 
             <div className={`${ourWorkstyles['our-work__grid']} `}>
                 <aside
@@ -108,7 +113,13 @@ export const OurWork = () => {
                     buttonText={mockData[0].buttonText}
                     alignment="left"
                 />
-
+                <div className={`${pageStyles['horizontal-graphic--left']}`}>
+                    <div
+                        className={`${pageStyles['horizontal-dash--left']}`}
+                    ></div>
+                    <Circle greyScale />
+                </div>
+                <div></div>
                 <Content
                     title={SEOSectionTitle()}
                     body={mockData[1].body}

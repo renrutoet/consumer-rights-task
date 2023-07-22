@@ -59,3 +59,42 @@
         position: relative;
     }
 }
+
+.horizontal-graphic {
+    position: relative;
+    height: 15rem;
+
+    & div:nth-of-type(2) {
+        position: relative;
+        top: 68%;
+        left: 70%;
+    }
+
+    &--left {
+        @extend .horizontal-graphic;
+        position: relative;
+        top: 67%;
+        left: 70%;
+
+        & div:nth-of-type(2) {
+            position: relative;
+            top: 0;
+            left: -65px;
+        }
+    }
+}
+
+.horizontal-dash {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 20%;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+
+    &--left {
+        @extend .horizontal-dash;
+        top: 50%;
+        left: 0;
+        width: 30%;
+    }
+}
