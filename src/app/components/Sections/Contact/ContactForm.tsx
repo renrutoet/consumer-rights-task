@@ -12,8 +12,8 @@ export const ContactForm = () => {
                     className={`${contactStyles['contact__form__left-column']}`}
                 >
                     <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Email address" />
-                    <input type="text" placeholder="Phone number" />
+                    <input type="email" placeholder="Email address" />
+                    <input type="number" placeholder="Phone number" />
                     <button
                         className={`${pageStyles['button']} ${pageStyles['button--small']}`}
                     >
