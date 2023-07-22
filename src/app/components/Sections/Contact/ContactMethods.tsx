@@ -42,7 +42,7 @@ const mockContactMethodData = [
 export const ContactMethods = (): JSX.Element => {
     return (
         <div className={`${contactStyles['contact-methods']} `}>
-            <Row fullHeight>
+            <Row height="full">
                 {mockContactMethodData
                     ? mockContactMethodData.map((iconData, index) => {
                           return (

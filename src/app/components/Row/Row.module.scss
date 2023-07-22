@@ -1,15 +1,25 @@
+@mixin row-height($height) {
+    height: $height;
+}
+
 .row {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%;
 
     &--between {
         @extend .row;
         justify-content: space-between;
     }
 
+    &--eighth {
+        @extend .row;
+        @include row-height(12.5%);
+    }
+
     &--full-height {
         @extend .row;
-        height: 100%;
+        @include row-height(100%);
     }
 }

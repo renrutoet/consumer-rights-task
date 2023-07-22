@@ -3,18 +3,22 @@ import styles from './Row.module.scss'
 
 interface RowProps extends PropsWithChildren {
     justifyContent?: 'between'
-    fullHeight?: boolean
+    height?: 'full' | 'eighth'
 }
 
 export const Row = ({
     children,
     justifyContent,
-    fullHeight,
+    height,
 }: RowProps): JSX.Element => {
     let classes = [`${styles.row}`]
 
-    if (fullHeight) {
+    if (height === 'full') {
         classes.push(` ${styles[`row--full-height`]}`)
+    }
+
+    if (height === 'eighth') {
+        classes.push(` ${styles[`row--eighth`]}`)
     }
 
     if (justifyContent) {
