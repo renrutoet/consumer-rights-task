@@ -41,5 +41,9 @@
 
     &--size-xlarge {
         font-size: 5rem;
+
+        @media screen and (max-width: $media-phone) {
+            font-size: 4rem;
+        }
     }
 }

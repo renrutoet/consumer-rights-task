@@ -4,12 +4,14 @@ import styles from './Row.module.scss'
 interface RowProps extends PropsWithChildren {
     justifyContent?: 'between'
     height?: 'full' | 'eighth' | 'normal'
+    responsive?: boolean
 }
 
 export const Row = ({
     children,
     justifyContent,
     height,
+    responsive = true,
 }: RowProps): JSX.Element => {
     let classes = [`${styles.row}`]
 
@@ -27,6 +29,10 @@ export const Row = ({
 
     if (justifyContent) {
         classes.push(` ${styles[`row--between`]}`)
+    }
+
+    if (responsive) {
+        classes.push(` ${styles[`row--responsive`]}`)
     }
 
     const className = classes.join('')

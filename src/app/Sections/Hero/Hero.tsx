@@ -9,16 +9,18 @@ import { ArrowIcon } from '@components/Graphics/ArrowIcon/ArrowIcon'
 export const Hero = () => {
     return (
         <section className={`${HeroStyles.hero} `} id="hero">
-            <Image
-                alt="3d graph graphic"
-                src={dlpBanner}
-                placeholder="blur"
-                fill
-                style={{
-                    zIndex: -1,
-                    objectFit: 'cover',
-                }}
-            />
+            <div className={`${HeroStyles['background--vert-fix']}`}>
+                <Image
+                    alt="3d graph graphic"
+                    src={dlpBanner}
+                    placeholder="blur"
+                    fill
+                    style={{
+                        zIndex: -1,
+                        objectFit: 'cover',
+                    }}
+                />
+            </div>
             <Navbar logoUrl="logo" links={heroData.navbar.links} />
             <div className={`${HeroStyles['hero-title']}`}>
                 <h1 className={`${HeroStyles['hero-title__main-text']}`}>
