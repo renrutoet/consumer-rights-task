@@ -15,6 +15,15 @@
             margin-block: 1rem;
             height: 100%;
         }
+
+        &--fixed {
+            @extend .c-icon;
+            height: 150px;
+
+            @media screen and (max-width: $media-tablet) {
+                margin-block: 1rem;
+            }
+        }
     }
 
     &__circle {

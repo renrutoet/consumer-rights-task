@@ -90,6 +90,7 @@ export const WhatWeDo = (): JSX.Element => {
                                       <IconWrapper
                                           key={`what-we-do-icons-${index}`}
                                           circle
+                                          fixed
                                       >
                                           {iconData.content}
                                       </IconWrapper>
