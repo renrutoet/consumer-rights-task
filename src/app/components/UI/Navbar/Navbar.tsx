@@ -1,10 +1,11 @@
-import { linksType } from '../../../data/mockHeroData'
 import { PropsWithChildren, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/Link'
+import dlpLogo from '@public/dlp-logo.svg'
 import styles from './Navbar.module.scss'
+import { linksType } from '../../../data/mockHeroData'
 import { ArrowIcon } from '../../Graphics/ArrowIcon/ArrowIcon'
 import { Row } from '../../Layout/Row/Row'
-import Image from 'next/image'
-import dlpLogo from '@public/dlp-logo.svg'
 
 interface NavbarProps extends PropsWithChildren {
     logoUrl: string
@@ -29,9 +30,9 @@ const NavItem = ({ text, linkUrl }: NavItemProps): JSX.Element => {
                 onMouseEnter={onHover}
                 onMouseLeave={onHover}
             >
-                <a href={linkUrl} className={`${styles['navbar__link']}`}>
+                <Link href={linkUrl} className={`${styles['navbar__link']}`}>
                     {text}
-                </a>
+                </Link>
                 {hovering ? (
                     <ArrowIcon chevron size="small" />
                 ) : (

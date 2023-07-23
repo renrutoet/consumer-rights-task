@@ -1,7 +1,8 @@
+import React, { useState } from 'react'
+import Link from 'next/link'
 import contactStyles from './Contact.module.scss'
 import textStyles from '@styles/text.module.scss'
 import pageStyles from '@styles/Page.module.scss'
-import React, { useState } from 'react'
 import { Input } from '@components/UI/Input/Input'
 
 interface Message {
@@ -148,7 +149,7 @@ export const ContactForm = () => {
                 *By pressing send you consent to Digital Litigation Partners
                 collecting your submitted information in order to respond to
                 your enquiry. For more information view our{' '}
-                <a href="#">Privacy Policy</a>
+                <Link href="#">Privacy Policy</Link>
             </p>
         </div>
     )
