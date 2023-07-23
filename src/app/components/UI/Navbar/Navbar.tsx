@@ -1,6 +1,6 @@
 import { PropsWithChildren, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/Link'
+import Link from 'next/link'
 import dlpLogo from '@public/dlp-logo.svg'
 import styles from './Navbar.module.scss'
 import { linksType } from '../../../data/mockHeroData'
