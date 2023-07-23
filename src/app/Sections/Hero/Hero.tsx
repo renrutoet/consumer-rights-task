@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import dlpBanner from '../../../../public/dlp-banner.jpg'
-import PageStyles from '../../styles/Page.module.scss'
+import PageStyles from '@styles/Page.module.scss'
 import HeroStyles from './Hero.module.scss'
 import { Navbar } from '../../components/UI/Navbar/Navbar'
 import { heroData } from '../../components/../data/mockHeroData'

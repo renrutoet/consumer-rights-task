@@ -1,5 +1,5 @@
 import contactStyles from './Contact.module.scss'
-import textStyles from '../../styles/text.module.scss'
+import textStyles from '@styles/text.module.scss'
 import { Row } from '../../components/Layout/Row/Row'
 import { IconWrapper } from '../../components/Graphics/Icon/Icon'
 import Image from 'next/image'
