@@ -1,10 +1,10 @@
-import { linksType } from '../../data/mockHeroData'
+import { linksType } from '../../../data/mockHeroData'
 import { PropsWithChildren, useState } from 'react'
 import styles from './Navbar.module.scss'
-import { ArrowIcon } from '../ArrowIcon/ArrowIcon'
-import { Row } from '../Row/Row'
+import { ArrowIcon } from '../../Graphics/ArrowIcon/ArrowIcon'
+import { Row } from '../../Layout/Row/Row'
 import Image from 'next/image'
-import dlpLogo from '../../../../public/dlp-logo.svg'
+import dlpLogo from '../../../../../public/dlp-logo.svg'
 
 interface NavbarProps extends PropsWithChildren {
     logoUrl: string

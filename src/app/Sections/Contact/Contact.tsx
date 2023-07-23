@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import dlpFooter from '../../../../../public/dlp-footer-background.jpg'
-import pageStyles from '../../../styles/Page.module.scss'
+import dlpFooter from '../../../../public/dlp-footer-background.jpg'
+import pageStyles from '../../styles/Page.module.scss'
 import contactStyles from './Contact.module.scss'
 import { ContactMethods } from './ContactMethods'
 import { ContactForm } from './ContactForm'
