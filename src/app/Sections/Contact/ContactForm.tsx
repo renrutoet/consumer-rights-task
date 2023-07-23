@@ -4,8 +4,17 @@ import pageStyles from '@styles/Page.module.scss'
 import React, { useState } from 'react'
 import { Input } from '@components/UI/Input/Input'
 
+interface Message {
+    success: string
+    name: string
+    email: string
+    phoneNumber: string
+    message: string
+}
+
 export const ContactForm = () => {
     const [validationError, setValidationError] = useState('')
+    const [messageSent, setMessageSent] = useState<Message | null>(null)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
@@ -36,18 +45,13 @@ export const ContactForm = () => {
         }
 
         setValidationError('')
-        alert(
-            JSON.stringify(
-                {
-                    name: name,
-                    email: email,
-                    phoneNumber: phoneNumber,
-                    message: message,
-                },
-                null,
-                2
-            )
-        )
+        setMessageSent({
+            success: 'Message Sent!',
+            name: name,
+            email: email,
+            phoneNumber: phoneNumber,
+            message: message,
+        })
     }
 
     return (
@@ -90,7 +94,6 @@ export const ContactForm = () => {
                             <button
                                 type="submit"
                                 className={`${pageStyles['button']} ${pageStyles['button--small']}`}
-                                aria-label="submit message button"
                             >
                                 Send Message*
                             </button>
@@ -107,9 +110,36 @@ export const ContactForm = () => {
                 </fieldset>
                 {validationError ? (
                     <div
-                        className={`${contactStyles['validation-error']} ${textStyles['font--primary']}`}
+                        className={`${contactStyles['validation--error']} ${textStyles['font--primary']}`}
                     >
                         {validationError}
+                    </div>
+                ) : null}
+                {messageSent ? (
+                    <div
+                        className={`${contactStyles['validation--success']} ${textStyles['font--primary']}`}
+                    >
+                        <div
+                            className={`${textStyles['font--secondary']} ${textStyles['font--size-large']} `}
+                        >
+                            {messageSent.success}
+                        </div>
+                        <p>
+                            Name:
+                            {messageSent.name}
+                        </p>
+                        <p>
+                            Email:
+                            {messageSent.email}
+                        </p>
+                        <p>
+                            Phone Number:
+                            {messageSent.phoneNumber}
+                        </p>
+                        <p>
+                            Message:
+                            {messageSent.message}
+                        </p>
                     </div>
                 ) : null}
             </form>

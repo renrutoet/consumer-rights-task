@@ -155,10 +155,18 @@
     }
 }
 
-.validation-error {
+.validation--error {
     border: 1px solid rgba($color: #c66, $alpha: 1);
     border-radius: 30px;
     padding: 1rem;
     margin-bottom: 1rem;
     background-color: rgba($color: #c66, $alpha: 1);
+}
+
+.validation--success {
+    border: 1px solid rgba($color: $dlp-light, $alpha: 1);
+    border-radius: 30px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba($color: $dlp-light, $alpha: 1);
 }
