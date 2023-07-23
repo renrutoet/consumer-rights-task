@@ -1,10 +1,52 @@
 import contactStyles from './Contact.module.scss'
 import pageStyles from '../../../styles/Page.module.scss'
+import React, { ChangeEvent, useState } from 'react'
+import { Input } from '../../Input/Input'
 
 export const ContactForm = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState('')
+    const [message, setMessage] = useState('')
+
+    const handleSubmit = (event: any): void => {
+        event.preventDefault()
+
+        if (!name || !email || !phoneNumber || !message) {
+            let missingFields = '\n'
+            if (!name) {
+                missingFields += 'name field \n'
+            }
+            if (!email) {
+                missingFields += 'email field \n'
+            }
+            if (!phoneNumber) {
+                missingFields += 'phoneNumber field \n'
+            }
+            if (!message) {
+                missingFields += 'message field \n'
+            }
+            alert('invalid form - please fill in: ' + missingFields)
+            return
+        }
+
+        alert(
+            JSON.stringify(
+                {
+                    name: name,
+                    email: email,
+                    phoneNumber: phoneNumber,
+                    message: message,
+                },
+                null,
+                2
+            )
+        )
+    }
+
     return (
         <div className={`${contactStyles['contact']} `}>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <fieldset>
                     <legend>
                         <h2 className={`${contactStyles['contact__title']} `}>
@@ -16,20 +58,28 @@ export const ContactForm = () => {
                         <div
                             className={`${contactStyles['contact__form__left-column']}`}
                         >
-                            <input
+                            <Input
                                 type="text"
                                 placeholder="Name"
                                 aria-label="name field"
+                                value={name}
+                                maxLength={30}
+                                changeCallback={setName}
                             />
-                            <input
+                            <Input
                                 type="email"
                                 placeholder="Email address"
                                 aria-label="email field"
+                                value={email}
+                                changeCallback={setEmail}
                             />
-                            <input
-                                type="number"
-                                placeholder="Phone number"
-                                aria-label="phone number field"
+                            <Input
+                                type="tel"
+                                placeholder="UK Phone number"
+                                aria-label="UK phone number field"
+                                value={phoneNumber}
+                                pattern="^\+?(44)?(0|7)\d{9,13}$"
+                                changeCallback={setPhoneNumber}
                             />
                             <button
                                 type="submit"
@@ -39,10 +89,13 @@ export const ContactForm = () => {
                                 Send Message*
                             </button>
                         </div>
-                        <textarea
+                        <Input
+                            type="textarea"
                             placeholder="Message"
                             className={`${contactStyles['contact__form__message']} `}
                             aria-label="message field"
+                            value={message}
+                            changeCallback={setMessage}
                         />
                     </div>
                 </fieldset>
