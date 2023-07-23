@@ -24,10 +24,10 @@ export const Hero = () => {
             />
             <Navbar logoUrl="logo" links={heroData.navbar.links} />
             <div className={`${HeroStyles['hero-title']}`}>
-                <p className={`${HeroStyles['hero-title__pre-text']}`}>
-                    We are the{' '}
-                </p>
                 <h1 className={`${HeroStyles['hero-title__main-text']}`}>
+                    <span className={`${HeroStyles['hero-title__pre-text']}`}>
+                        We are the{' '}
+                    </span>
                     Digital Litigation Partners
                 </h1>
             </div>

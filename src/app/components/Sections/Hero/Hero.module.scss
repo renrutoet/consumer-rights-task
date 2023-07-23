@@ -20,6 +20,7 @@
     flex-direction: column;
 
     &__pre-text {
+        display: block;
         font-style: italic;
         font-family: $font-playfair-display;
         font-size: 3rem;
