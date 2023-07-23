@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import { IconWrapper } from '../../components/Graphics/Icon/Icon'
-import { Row } from '../../components/Layout/Row/Row'
-import { Circle } from '../../components/Graphics/Circle/Circle'
+import { IconWrapper } from '@components/Graphics/Icon/Icon'
+import { Row } from '@components/Layout/Row/Row'
+import { Circle } from '@components/Graphics/Circle/Circle'
 import contactStyles from './Contact.module.scss'
 import pageStyles from '@styles/Page.module.scss'
-import phoneIcon from '../../../../public/icons/phone-incoming-call.svg'
-import houseIcon from '../../../../public/icons/house-chimney-2.svg'
-import emailIcon from '../../../../public/icons/send-email-1.svg'
+import phoneIcon from '@public/icons/phone-incoming-call.svg'
+import houseIcon from '@public/icons/house-chimney-2.svg'
+import emailIcon from '@public/icons/send-email-1.svg'
 
 const mockContactMethodData = [
     {

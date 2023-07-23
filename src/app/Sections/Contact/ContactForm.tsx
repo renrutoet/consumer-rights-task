@@ -1,7 +1,7 @@
 import contactStyles from './Contact.module.scss'
 import pageStyles from '@styles/Page.module.scss'
 import React, { useState } from 'react'
-import { Input } from '../../components/UI/Input/Input'
+import { Input } from '@components/UI/Input/Input'
 
 export const ContactForm = () => {
     const [name, setName] = useState('')

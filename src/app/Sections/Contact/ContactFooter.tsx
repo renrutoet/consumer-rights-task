@@ -1,12 +1,12 @@
 import contactStyles from './Contact.module.scss'
 import textStyles from '@styles/text.module.scss'
-import { Row } from '../../components/Layout/Row/Row'
-import { IconWrapper } from '../../components/Graphics/Icon/Icon'
+import { Row } from '@components/Layout/Row/Row'
+import { IconWrapper } from '@components/Graphics/Icon/Icon'
 import Image from 'next/image'
-import facebookIcon from '../../../../public/icons/social-media-facebook-1.svg'
-import twitterIcon from '../../../../public/icons/social-media-twitter.svg'
-import instagramIcon from '../../../../public/icons/social-instagram.svg'
-import linkedinIcon from '../../../../public/icons/professional-network-linkedin.svg'
+import facebookIcon from '@public/icons/social-media-facebook-1.svg'
+import twitterIcon from '@public/icons/social-media-twitter.svg'
+import instagramIcon from '@public/icons/social-instagram.svg'
+import linkedinIcon from '@public/icons/professional-network-linkedin.svg'
 
 const mockSocialMediaData = [
     {
