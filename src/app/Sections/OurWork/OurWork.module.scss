@@ -8,6 +8,12 @@
     display: grid;
 
     grid-template-columns: repeat(2, 50%);
+
+    @media screen and (max-width: $media-tablet) {
+        grid-template-columns: 100%;
+        width: 100%;
+    }
+
     grid-template-rows: auto;
     gap: 2rem;
 
@@ -32,9 +38,20 @@
 
         & em:first-of-type {
             font-size: 7rem;
+            @media screen and (max-width: $media-tablet) {
+                font-size: 5rem;
+            }
         }
         & em {
             font-size: 6rem;
+            @media screen and (max-width: $media-tablet) {
+                font-size: 3rem;
+            }
+        }
+
+        @media screen and (max-width: $media-tablet) {
+            font-size: 2rem;
+            line-height: 3rem;
         }
     }
 
@@ -43,6 +60,10 @@
 
         font-size: 1.5rem;
         font-weight: 400;
+
+        @media screen and (max-width: $media-tablet) {
+            font-size: 1.5rem;
+        }
     }
 
     &__background-text {
@@ -53,11 +74,26 @@
         writing-mode: vertical-rl;
 
         @include faded-background-text();
+
+        @media screen and (max-width: $media-tablet) {
+            padding-top: 30%;
+        }
     }
 
     &__seo-image-aside {
         display: flex;
         justify-content: center;
+        align-items: flex-end;
+
+        @media screen and (max-width: $media-tablet) {
+            height: 30rem;
+            & img {
+                object-fit: contain;
+                z-index: -1;
+                position: relative;
+                bottom: -30rem;
+            }
+        }
     }
 
     &__web-dev-aside {
@@ -65,6 +101,10 @@
         align-items: flex-end;
         justify-content: flex-end;
         padding-inline: 4rem;
+
+        @media screen and (max-width: $media-tablet) {
+            width: 100%;
+        }
 
         & img {
             margin: 1rem;
@@ -81,5 +121,9 @@
         @extend .content;
         padding-top: 10rem;
         text-align: end;
+
+        @media screen and (max-width: $media-tablet) {
+            text-align: start;
+        }
     }
 }

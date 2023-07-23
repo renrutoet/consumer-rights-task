@@ -10,6 +10,7 @@ import pageStyles from '@styles/Page.module.scss'
 import textStyles from '@styles/text.module.scss'
 import ourWorkstyles from './OurWork.module.scss'
 import { Circle } from '@components/Graphics/Circle/Circle'
+import { Row } from '@/app/components/Layout/Row/Row'
 
 const mockData = [
     {
@@ -84,7 +85,7 @@ export const OurWork = () => {
     return (
         <section className={`${ourWorkstyles['our-work']} `}>
             <Image
-                alt="3d graph graphic"
+                alt="blurred picture of a laptop"
                 src={dlpBackground}
                 placeholder="blur"
                 fill
@@ -94,7 +95,7 @@ export const OurWork = () => {
                 }}
             />
             <Image
-                alt="3d graph graphic"
+                alt="cut off picture of a laptop"
                 src={dlpLaptop}
                 placeholder="blur"
                 style={{
@@ -118,18 +119,20 @@ export const OurWork = () => {
                 <aside
                     className={`${ourWorkstyles['content__web-dev-aside']} `}
                 >
-                    <Image
-                        src={wordpressLogo}
-                        alt="image of a smartphone display the google homepage"
-                    />
-                    <Image
-                        src={reactLogo}
-                        alt="image of a smartphone display the google homepage"
-                    />
-                    <Image
-                        src={gatsbyLogo}
-                        alt="image of a smartphone display the google homepage"
-                    />
+                    <Row>
+                        <Image
+                            src={wordpressLogo}
+                            alt="image of a smartphone display the google homepage"
+                        />
+                        <Image
+                            src={reactLogo}
+                            alt="image of a smartphone display the google homepage"
+                        />
+                        <Image
+                            src={gatsbyLogo}
+                            alt="image of a smartphone display the google homepage"
+                        />
+                    </Row>
                 </aside>
                 <Content
                     title={WebSectionTitle()}
