@@ -1,4 +1,6 @@
-import { PropsWithChildren, ReactNode } from 'react'
+import { ReactNode } from 'react'
+import dlpBackground from '../../../../../public/dlp-block-background.jpg'
+import dlpLaptop from '../../../../../public//dlp-laptop.png'
 import Image from 'next/image'
 import wordpressLogo from '../../../../../public/wordpress-logo.svg'
 import reactLogo from '../../../../../public/react-logo.svg'
@@ -81,6 +83,28 @@ const Content = ({
 export const OurWork = () => {
     return (
         <section className={`${ourWorkstyles['our-work']} `}>
+            <Image
+                alt="3d graph graphic"
+                src={dlpBackground}
+                placeholder="blur"
+                fill
+                style={{
+                    zIndex: -1,
+                    objectFit: 'cover',
+                }}
+            />
+            <Image
+                alt="3d graph graphic"
+                src={dlpLaptop}
+                placeholder="blur"
+                style={{
+                    zIndex: -1,
+                    objectFit: 'cover',
+                    position: 'absolute',
+                    height: 'auto',
+                    width: '60%',
+                }}
+            />
             <div className={`${pageStyles['centered-dash']}`}></div>
             <div className={`${ourWorkstyles['content__background-text']}`}>
                 Digital Marketing
