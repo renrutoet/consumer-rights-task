@@ -109,7 +109,9 @@ export const WhatWeDo = (): JSX.Element => {
                         className={`${pageStyles['centered-dash--bottom']} ${pageStyles['centered-dash--relative']} ${pageStyles['centered-dash--solid']}`}
                     ></div>
                 </div>
-                <Circle />
+                <div className={`${whatWeDoStyles['circle--offset']}`}>
+                    <Circle />
+                </div>
                 <div className={`${whatWeDoStyles.bottom}`}>
                     <h2
                         className={`${textStyles['font--primary']} ${whatWeDoStyles['bottom__heading']}`}
