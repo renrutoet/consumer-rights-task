@@ -24,20 +24,20 @@ const NavItem = ({ text, linkUrl }: NavItemProps): JSX.Element => {
 
     return (
         <>
-            <a href={linkUrl} className={styles['navbar__link']}>
-                <li
-                    className={styles['navbar__item']}
-                    onMouseEnter={onHover}
-                    onMouseLeave={onHover}
-                >
+            <li
+                className={`${styles['navbar__item']}`}
+                onMouseEnter={onHover}
+                onMouseLeave={onHover}
+            >
+                <a href={linkUrl} className={`${styles['navbar__link']}`}>
                     {text}
-                    {hovering ? (
-                        <ArrowIcon chevron size="small" />
-                    ) : (
-                        <ArrowIcon empty />
-                    )}
-                </li>
-            </a>
+                </a>
+                {hovering ? (
+                    <ArrowIcon chevron size="small" />
+                ) : (
+                    <ArrowIcon empty />
+                )}
+            </li>
         </>
     )
 }

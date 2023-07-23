@@ -47,7 +47,7 @@ export const WhatWeDo = (): JSX.Element => {
                         Duis elit mi, interdum id posuere ut, semper elementum
                         turpis. Sed varius volutpat quam id maximus.
                     </div>
-                    <h4
+                    <h2
                         className={`${whatWeDoStyles['top__grid--bottom-left']} ${textStyles['font--primary']} ${textStyles['font--bold']} ${textStyles['font--size-large']}`}
                     >
                         Automate{' '}
@@ -60,7 +60,7 @@ export const WhatWeDo = (): JSX.Element => {
                         <span className={` ${textStyles['font--size-xlarge']}`}>
                             business
                         </span>
-                    </h4>
+                    </h2>
                     <div
                         className={`${whatWeDoStyles['top__grid--bottom-right']} ${textStyles['font--primary']} ${textStyles['font--regular']}`}
                     >
@@ -111,7 +111,7 @@ export const WhatWeDo = (): JSX.Element => {
                 </div>
                 <Circle />
                 <div className={`${whatWeDoStyles.bottom}`}>
-                    <h4
+                    <h2
                         className={`${textStyles['font--primary']} ${whatWeDoStyles['bottom__heading']}`}
                     >
                         Vestibulum{' '}
@@ -123,7 +123,7 @@ export const WhatWeDo = (): JSX.Element => {
                             <em>sed maximus</em>
                         </span>{' '}
                         quam venenatis?
-                    </h4>
+                    </h2>
                     <div className={`${textStyles['font--primary']}`}>
                         Etiam elementum efficitur auctor. Duis tempor nisi ut
                         risus pellentesque posuere. Fusce vehicula massa at

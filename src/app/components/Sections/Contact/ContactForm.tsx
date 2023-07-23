@@ -4,9 +4,9 @@ import pageStyles from '../../../styles/Page.module.scss'
 export const ContactForm = () => {
     return (
         <div className={`${contactStyles['contact']} `}>
-            <h4 className={`${contactStyles['contact__title']} `}>
+            <h2 className={`${contactStyles['contact__title']} `}>
                 <em>Enquire online</em>
-            </h4>
+            </h2>
             <div className={`${contactStyles['contact__form']} `}>
                 <div
                     className={`${contactStyles['contact__form__left-column']}`}
