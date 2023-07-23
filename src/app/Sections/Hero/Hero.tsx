@@ -8,10 +8,7 @@ import { ArrowIcon } from '@components/Graphics/ArrowIcon/ArrowIcon'
 
 export const Hero = () => {
     return (
-        <section
-            className={`${PageStyles.section}  ${HeroStyles.hero} `}
-            id="hero"
-        >
+        <section className={`${HeroStyles.hero} `} id="hero">
             <Image
                 alt="3d graph graphic"
                 src={dlpBanner}

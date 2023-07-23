@@ -17,6 +17,11 @@
         font-size: 0.65rem;
     }
 
+    @media screen and (max-width: $media-tablet) {
+        padding-block: 1rem;
+        padding-inline: 3rem;
+    }
+
     @mixin user-interacting {
         transition: all 0.2s ease-in;
         transform: scale(1.05);

@@ -1,7 +1,8 @@
 @import '@styles/variables.scss';
 
 .hero {
-    height: 100vh;
+    height: 100%;
+    // min-height: 100vh;
     padding-block: 2rem;
 
     display: flex;
@@ -26,6 +27,11 @@
         font-size: 3rem;
 
         margin-bottom: 2rem;
+
+        @media screen and (max-width: $media-phone) {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
     }
 
     &__main-text {
@@ -38,6 +44,12 @@
 
         width: 50%;
         word-wrap: break-word;
+
+        @media screen and (max-width: $media-phone) {
+            font-size: 2rem;
+            line-height: 4rem;
+            margin-bottom: 1rem;
+        }
     }
 }
 

@@ -1,8 +1,16 @@
+@import '@styles/variables.scss';
+
 .row {
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
     width: 100%;
+
+    @media screen and (max-width: $media-tablet) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     &--between {
         @extend .row;
