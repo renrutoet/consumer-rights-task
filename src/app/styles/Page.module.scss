@@ -1,12 +1,5 @@
 @import './variables.scss';
 
-.section {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-}
-
 .button {
     border: 2px solid $primary-white;
     border-radius: 50px;

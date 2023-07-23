@@ -7,6 +7,10 @@ $primary-black: #000;
 $font-playfair-display: var(--font-playfair-display);
 $font-source-sans-3: var(--font-source-sans-3);
 
+$media-phone: 480px;
+$media-tablet: 960px;
+$media-desktop: 1260px;
+
 @mixin round-border {
     border-radius: 5px;
     border: none;
