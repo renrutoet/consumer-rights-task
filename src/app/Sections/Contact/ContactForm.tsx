@@ -1,35 +1,41 @@
 import contactStyles from './Contact.module.scss'
+import textStyles from '@styles/text.module.scss'
 import pageStyles from '@styles/Page.module.scss'
 import React, { useState } from 'react'
 import { Input } from '@components/UI/Input/Input'
 
 export const ContactForm = () => {
+    const [validationError, setValidationError] = useState('')
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
     const [message, setMessage] = useState('')
 
-    const handleSubmit = (event: any): void => {
+    const dummySubmit = (event: any): void => {
         event.preventDefault()
 
         if (!name || !email || !phoneNumber || !message) {
             let missingFields = '\n'
             if (!name) {
-                missingFields += 'name field \n'
+                missingFields += ' NAME field --- '
             }
             if (!email) {
-                missingFields += 'email field \n'
+                missingFields += ' EMAIL field --- '
             }
             if (!phoneNumber) {
-                missingFields += 'phoneNumber field \n'
+                missingFields += ' PHONE NUMBER field --- '
             }
             if (!message) {
-                missingFields += 'message field \n'
+                missingFields += ' MESSAGE field'
             }
-            alert('invalid form - please fill in: ' + missingFields)
+            // alert('invalid form - please fill in: ' + missingFields)
+            setValidationError(
+                'Invalid form - please fill in: ' + missingFields
+            )
             return
         }
 
+        setValidationError('')
         alert(
             JSON.stringify(
                 {
@@ -46,7 +52,7 @@ export const ContactForm = () => {
 
     return (
         <div className={`${contactStyles['contact']} `}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={dummySubmit}>
                 <fieldset>
                     <legend>
                         <h2 className={`${contactStyles['contact__title']} `}>
@@ -99,6 +105,13 @@ export const ContactForm = () => {
                         />
                     </div>
                 </fieldset>
+                {validationError ? (
+                    <div
+                        className={`${contactStyles['validation-error']} ${textStyles['font--primary']}`}
+                    >
+                        {validationError}
+                    </div>
+                ) : null}
             </form>
 
             <p className={`${contactStyles['contact__legal']}`}>
