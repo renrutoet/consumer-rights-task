@@ -24,11 +24,19 @@
         font-size: 0.65rem;
     }
 
-    &:hover {
+    @mixin user-interacting {
         transition: all 0.2s ease-in;
         transform: scale(1.05);
         background-color: $primary-white;
         color: $primary-black;
+    }
+
+    &:hover {
+        @include user-interacting();
+    }
+
+    &:focus {
+        @include user-interacting();
     }
     &:not(:hover) {
         transition: all 0.2s ease-in;
