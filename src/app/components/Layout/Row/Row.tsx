@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react'
 import styles from './Row.module.scss'
 
 interface RowProps extends PropsWithChildren {
-    justifyContent?: 'between'
+    justifyContent?: 'between' | 'end'
     height?: 'full' | 'eighth' | 'normal'
     responsive?: boolean
 }
@@ -19,6 +19,10 @@ export const Row = ({
         classes.push(` ${styles[`row--full-height`]}`)
     }
 
+    if (height === 'full') {
+        classes.push(` ${styles[`row--full-height`]}`)
+    }
+
     if (height === 'eighth') {
         classes.push(` ${styles[`row--eighth`]}`)
     }
@@ -27,8 +31,12 @@ export const Row = ({
         classes.push(` ${styles[`row--normal`]}`)
     }
 
-    if (justifyContent) {
+    if (justifyContent === 'between') {
         classes.push(` ${styles[`row--between`]}`)
+    }
+
+    if (justifyContent === 'end') {
+        classes.push(` ${styles[`row--end`]}`)
     }
 
     if (responsive) {

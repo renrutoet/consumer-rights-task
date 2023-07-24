@@ -95,7 +95,7 @@ export const OurWork = () => {
                 <aside
                     className={`${ourWorkstyles['content__web-dev-aside']} `}
                 >
-                    <Row>
+                    <Row justifyContent="end">
                         <Image
                             src={wordpressLogo}
                             alt="image of a smartphone display the google homepage"
