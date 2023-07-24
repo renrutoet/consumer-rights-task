@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dlp_contents",
+  "info": {
+    "singularName": "dlp-content",
+    "pluralName": "dlp-contents",
+    "displayName": "DLP-content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}

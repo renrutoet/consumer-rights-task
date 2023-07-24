@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_list_navbars",
+  "info": {
+    "displayName": "Navbar"
+  },
+  "options": {},
+  "attributes": {
+    "nav": {
+      "displayName": "Navbar2",
+      "type": "component",
+      "repeatable": false,
+      "component": "list.navbar2"
+    }
+  }
+}

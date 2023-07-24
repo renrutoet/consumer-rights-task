@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_section_paragraphs",
+  "info": {
+    "displayName": "paragraph"
+  },
+  "options": {},
+  "attributes": {
+    "body": {
+      "type": "text"
+    }
+  }
+}

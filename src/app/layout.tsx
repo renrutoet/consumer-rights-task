@@ -1,5 +1,9 @@
 import './globals.css'
-import type { Metadata } from 'next'
+import type {
+    InferGetServerSidePropsType,
+    GetServerSideProps,
+    Metadata,
+} from 'next'
 import { Source_Sans_3, Playfair_Display } from 'next/font/google'
 
 const sourceSans = Source_Sans_3({

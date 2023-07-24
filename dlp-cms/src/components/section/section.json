@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_sections",
+  "info": {
+    "displayName": "section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "paragraph": {
+      "displayName": "paragraph",
+      "type": "component",
+      "repeatable": true,
+      "component": "section.paragraph"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_list_navbar2s",
+  "info": {
+    "displayName": "Navbar2"
+  },
+  "options": {},
+  "attributes": {
+    "navlink2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "link.link"
+    }
+  }
+}
