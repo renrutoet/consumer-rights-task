@@ -20,7 +20,7 @@ interface ContentProps {
     alignment?: 'left' | 'right'
 }
 
-const SectionTitle = (title: string): JSX.Element => {
+const SectionTitle = (title: string): React.JSX.Element => {
     const splitTitle = title.split(' ')
     return (
         <h2
@@ -40,7 +40,7 @@ const Content = ({
     body,
     buttonText,
     alignment,
-}: ContentProps): JSX.Element => {
+}: ContentProps): React.JSX.Element => {
     const containerClass = alignment
         ? `${ourWorkstyles[`content--${alignment}`]} `
         : `${ourWorkstyles['content']}`

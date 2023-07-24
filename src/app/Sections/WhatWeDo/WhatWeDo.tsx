@@ -28,7 +28,7 @@ const mockIconData = [
     },
 ]
 
-export const WhatWeDo = (): JSX.Element => {
+export const WhatWeDo = (): React.JSX.Element => {
     const splitTopTitle = contentData.whatWeDo.top.title.split(' ')
     return (
         <section className={`${whatWeDoStyles['what-we-do']}`}>

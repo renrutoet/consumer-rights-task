@@ -4,7 +4,9 @@ interface CircleProps {
     greyScale?: boolean
 }
 
-export const Circle = ({ greyScale = false }: CircleProps): JSX.Element => {
+export const Circle = ({
+    greyScale = false,
+}: CircleProps): React.JSX.Element => {
     const classExtension = greyScale ? '--greyscale' : ''
 
     return (

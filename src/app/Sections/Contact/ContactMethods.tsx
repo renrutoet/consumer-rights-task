@@ -41,7 +41,7 @@ const mockContactMethodData = [
     },
 ]
 
-export const ContactMethods = (): JSX.Element => {
+export const ContactMethods = (): React.JSX.Element => {
     return (
         <>
             <div className={`${contactStyles['contact-methods']} `}>

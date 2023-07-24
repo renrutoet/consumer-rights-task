@@ -12,7 +12,7 @@ export const Row = ({
     justifyContent,
     height,
     responsive = true,
-}: RowProps): JSX.Element => {
+}: RowProps): React.JSX.Element => {
     let classes = [`${styles.row}`]
 
     if (height === 'full') {

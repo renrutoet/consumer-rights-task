@@ -12,7 +12,7 @@ export const IconWrapper = ({
     children,
     circle = false,
     fixed = false,
-}: IconProps): JSX.Element => {
+}: IconProps): React.JSX.Element => {
     return (
         <div
             className={

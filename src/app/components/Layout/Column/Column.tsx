@@ -7,7 +7,10 @@ interface ColumnProps extends PropsWithChildren {
     classes?: columnClasses[]
 }
 
-export const Column = ({ children, classes }: ColumnProps): JSX.Element => {
+export const Column = ({
+    children,
+    classes,
+}: ColumnProps): React.JSX.Element => {
     const mapped = classes?.map((className) => {
         return `${styles[className]}`
     })

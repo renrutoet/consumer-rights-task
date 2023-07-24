@@ -12,7 +12,7 @@ export const Input = ({
     value,
     changeCallback,
     ...remaingProps
-}: InputProps): JSX.Element => {
+}: InputProps): React.JSX.Element => {
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
         e.preventDefault()
 

@@ -16,7 +16,7 @@ interface NavItemProps extends PropsWithChildren {
     linkUrl: string
 }
 
-const NavItem = ({ text, linkUrl }: NavItemProps): JSX.Element => {
+const NavItem = ({ text, linkUrl }: NavItemProps): React.JSX.Element => {
     const [hovering, setHovering] = useState(false)
 
     const onHover = () => {
@@ -43,7 +43,7 @@ const NavItem = ({ text, linkUrl }: NavItemProps): JSX.Element => {
     )
 }
 
-export const Navbar = ({ links, logoUrl }: NavbarProps): JSX.Element => {
+export const Navbar = ({ links, logoUrl }: NavbarProps): React.JSX.Element => {
     return (
         <div className={styles.navbar}>
             <Row justifyContent="between">
