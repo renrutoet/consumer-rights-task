@@ -1,9 +1,9 @@
 import { PropsWithChildren, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { linksType } from '@/app/data/contentData'
 import dlpLogo from '@public/dlp-logo.svg'
 import styles from './Navbar.module.scss'
-import { linksType } from '../../../data/mockHeroData'
 import { ArrowIcon } from '../../Graphics/ArrowIcon/ArrowIcon'
 import { Row } from '../../Layout/Row/Row'
 
