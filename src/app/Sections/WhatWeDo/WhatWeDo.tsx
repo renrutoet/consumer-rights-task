@@ -31,7 +31,7 @@ const mockIconData = [
 export const WhatWeDo = (): React.JSX.Element => {
     const splitTopTitle = contentData.whatWeDo.top.title.split(' ')
     return (
-        <section className={`${whatWeDoStyles['what-we-do']}`}>
+        <section className={`${whatWeDoStyles['what-we-do']}`} id="what-we-do">
             <SplitBackground text={contentData.whatWeDo.backgroundText} />
             <Column classes={['flex-column--width-60']}>
                 <div className={`${whatWeDoStyles['top']}`}>

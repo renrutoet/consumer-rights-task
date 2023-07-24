@@ -59,7 +59,7 @@ const Content = ({
 
 export const OurWork = () => {
     return (
-        <section className={`${ourWorkstyles['our-work']} `}>
+        <section className={`${ourWorkstyles['our-work']} `} id="our-work">
             <Image
                 alt="blurred picture of a laptop"
                 src={dlpBackground}

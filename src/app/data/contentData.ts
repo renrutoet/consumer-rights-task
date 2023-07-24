@@ -12,10 +12,10 @@ export const contentData = {
         navbar: {
             links: [
                 { text: 'What we do', url: '#' },
-                { text: 'Our work', url: '#' },
+                { text: 'Our work', url: '#our-work' },
                 { text: 'News', url: '#' },
-                { text: 'Who we are', url: '#' },
-                { text: 'Get in touch', url: '#' },
+                { text: 'Who we are', url: '#what-we-do' },
+                { text: 'Get in touch', url: '#contact' },
             ],
             logoUrl: '/dlp-logo.svg',
         },

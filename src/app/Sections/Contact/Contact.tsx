@@ -8,7 +8,7 @@ import { ContactFooter } from './ContactFooter'
 
 export const Contact = () => {
     return (
-        <section className={`${contactStyles['get-in-touch']} `}>
+        <section className={`${contactStyles['get-in-touch']} `} id="contact">
             <div>
                 <div
                     className={`${pageStyles['centered-dash--top']} ${pageStyles['centered-dash--relative']} ${pageStyles['centered-dash--solid']}`}
