@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import Link from 'next/link'
 import contactStyles from './Contact.module.scss'
@@ -39,7 +41,6 @@ export const ContactForm = () => {
             if (!message) {
                 missingFields += ' MESSAGE field'
             }
-            // alert('invalid form - please fill in: ' + missingFields)
             setValidationError(
                 'Invalid form - please fill in: ' + missingFields
             )

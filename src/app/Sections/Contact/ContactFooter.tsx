@@ -7,7 +7,6 @@ import facebookIcon from '@public/icons/social-media-facebook-1.svg'
 import twitterIcon from '@public/icons/social-media-twitter.svg'
 import instagramIcon from '@public/icons/social-instagram.svg'
 import linkedinIcon from '@public/icons/professional-network-linkedin.svg'
-import { contentData } from '@/app/data/contentData'
 
 const mockSocialMediaData = [
     {
@@ -52,7 +51,8 @@ const mockSocialMediaData = [
     },
 ]
 
-export const ContactFooter = () => {
+export const ContactFooter = ({ cmsData }: Record<string, any>) => {
+    const { contact } = cmsData
     return (
         <>
             <div className={`${contactStyles['footer-details']} `}>
@@ -75,7 +75,7 @@ export const ContactFooter = () => {
                 <p
                     className={`${textStyles['font--secondary']} ${textStyles['font--italic']} ${textStyles['text-center']}`}
                 >
-                    {contentData.contact.footer}
+                    {contact.footer}
                 </p>
             </div>
         </>

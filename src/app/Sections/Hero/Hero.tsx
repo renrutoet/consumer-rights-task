@@ -4,10 +4,10 @@ import PageStyles from '@styles/Page.module.scss'
 import HeroStyles from './Hero.module.scss'
 import { Navbar } from '@components/UI/Navbar/Navbar'
 import { ArrowIcon } from '@components/Graphics/ArrowIcon/ArrowIcon'
-import { contentData } from '../../data/contentData'
 
-export const Hero = () => {
-    const titleText = contentData.hero.title
+export const Hero = ({ cmsData }: Record<string, any>) => {
+    const { hero } = cmsData
+    const titleText = hero.title
 
     const splitTitle = titleText.split(' ')
     return (
@@ -24,7 +24,7 @@ export const Hero = () => {
                     }}
                 />
             </div>
-            <Navbar logoUrl="logo" links={contentData.hero.navbar.links} />
+            <Navbar logoUrl="logo" links={hero.navbar.links} />
             <div className={`${HeroStyles['hero-title']}`}>
                 <h1 className={`${HeroStyles['hero-title__main-text']}`}>
                     <span className={`${HeroStyles['hero-title__pre-text']}`}>
@@ -35,7 +35,7 @@ export const Hero = () => {
             </div>
             <div className={`${HeroStyles['call-to-action']}`}>
                 <button className={`${PageStyles['button']}`}>
-                    {contentData.generic.buttonText}
+                    {cmsData.generic.buttonText}
                 </button>
                 <div className={`${HeroStyles['call-to-action__arrow']}`}>
                     <ArrowIcon size="large" />

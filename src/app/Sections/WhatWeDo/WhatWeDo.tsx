@@ -11,7 +11,7 @@ import { Column } from '@components/Layout/Column/Column'
 import { Row } from '@components/Layout/Row/Row'
 import { IconWrapper } from '@components/Graphics/Icon/Icon'
 import { Circle } from '@components/Graphics/Circle/Circle'
-import { contentData } from '@/app/data/contentData'
+// import { contentData } from '@/app/data/contentData'
 
 const mockIconData = [
     {
@@ -28,11 +28,14 @@ const mockIconData = [
     },
 ]
 
-export const WhatWeDo = (): React.JSX.Element => {
-    const splitTopTitle = contentData.whatWeDo.top.title.split(' ')
+export const WhatWeDo = ({
+    cmsData,
+}: Record<string, any>): React.JSX.Element => {
+    const { whatWeDo } = cmsData
+    const splitTopTitle = whatWeDo.top.title.split(' ')
     return (
         <section className={`${whatWeDoStyles['what-we-do']}`} id="what-we-do">
-            <SplitBackground text={contentData.whatWeDo.backgroundText} />
+            <SplitBackground text={whatWeDo.backgroundText} />
             <Column classes={['flex-column--width-60']}>
                 <div className={`${whatWeDoStyles['top']}`}>
                     <div
@@ -41,7 +44,7 @@ export const WhatWeDo = (): React.JSX.Element => {
                     <div
                         className={`${whatWeDoStyles['top__grid--top-right']} ${textStyles['font--secondary']} ${textStyles['font--regular']}`}
                     >
-                        {contentData.whatWeDo.top.paragraphs[0]}
+                        {whatWeDo.top.paragraphs[0]}
                     </div>
                     <h2
                         className={`${whatWeDoStyles['top__grid--bottom-left']} ${textStyles['font--primary']} ${textStyles['font--bold']} ${textStyles['font--size-large']}`}
@@ -60,7 +63,7 @@ export const WhatWeDo = (): React.JSX.Element => {
                     <div
                         className={`${whatWeDoStyles['top__grid--bottom-right']} ${textStyles['font--primary']} ${textStyles['font--regular']}`}
                     >
-                        {contentData.whatWeDo.top.paragraphs[1]}{' '}
+                        {whatWeDo.top.paragraphs[1]}{' '}
                     </div>
                 </div>
                 <div
@@ -117,10 +120,10 @@ export const WhatWeDo = (): React.JSX.Element => {
                         quam venenatis?
                     </h2>
                     <div className={`${textStyles['font--primary']}`}>
-                        {contentData.whatWeDo.bottom.paragraphs[0]}
+                        {whatWeDo.bottom.paragraphs[0]}
                     </div>
                     <button className={`${pageStyles.button}`}>
-                        {contentData.generic.buttonText}
+                        {cmsData.generic.buttonText}
                     </button>
                 </div>
             </Column>

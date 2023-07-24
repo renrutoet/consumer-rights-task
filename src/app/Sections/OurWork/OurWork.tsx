@@ -11,7 +11,6 @@ import textStyles from '@styles/text.module.scss'
 import ourWorkstyles from './OurWork.module.scss'
 import { Circle } from '@components/Graphics/Circle/Circle'
 import { Row } from '@/app/components/Layout/Row/Row'
-import { contentData } from '@/app/data/contentData'
 
 interface ContentProps {
     title: ReactNode
@@ -57,7 +56,8 @@ const Content = ({
     )
 }
 
-export const OurWork = () => {
+export const OurWork = ({ cmsData }: Record<string, any>) => {
+    const { ourWork } = cmsData
     return (
         <section className={`${ourWorkstyles['our-work']} `} id="our-work">
             <Image
@@ -84,7 +84,7 @@ export const OurWork = () => {
             />
             <div className={`${pageStyles['centered-dash']}`}></div>
             <div className={`${ourWorkstyles['content__background-text']}`}>
-                {contentData.ourWork.backgroundText}
+                {ourWork.backgroundText}
             </div>
             <div className={`${pageStyles['horizontal-graphic']}`}>
                 <div className={`${pageStyles['horizontal-dash']}`}></div>
@@ -111,11 +111,9 @@ export const OurWork = () => {
                     </Row>
                 </aside>
                 <Content
-                    title={SectionTitle(
-                        contentData.ourWork.textContent[0].title
-                    )}
-                    body={contentData.ourWork.textContent[0].body}
-                    buttonText={contentData.generic.buttonText}
+                    title={SectionTitle(ourWork.textContent[0].title)}
+                    body={ourWork.textContent[0].body}
+                    buttonText={cmsData.generic.buttonText}
                     alignment="left"
                 />
                 <div className={`${pageStyles['horizontal-graphic--left']}`}>
@@ -126,11 +124,9 @@ export const OurWork = () => {
                 </div>
                 <div></div>
                 <Content
-                    title={SectionTitle(
-                        contentData.ourWork.textContent[1].title
-                    )}
-                    body={contentData.ourWork.textContent[1].body}
-                    buttonText={contentData.generic.buttonText}
+                    title={SectionTitle(ourWork.textContent[1].title)}
+                    body={ourWork.textContent[1].body}
+                    buttonText={cmsData.generic.buttonText}
                     alignment="right"
                 />
                 <aside

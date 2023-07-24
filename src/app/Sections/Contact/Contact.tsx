@@ -6,7 +6,7 @@ import { ContactMethods } from './ContactMethods'
 import { ContactForm } from './ContactForm'
 import { ContactFooter } from './ContactFooter'
 
-export const Contact = () => {
+export const Contact = ({ cmsData }: Record<string, any>) => {
     return (
         <section className={`${contactStyles['get-in-touch']} `} id="contact">
             <div>
@@ -26,7 +26,7 @@ export const Contact = () => {
             />
             <ContactMethods />
             <ContactForm />
-            <ContactFooter />
+            <ContactFooter cmsData={cmsData} />
         </section>
     )
 }
