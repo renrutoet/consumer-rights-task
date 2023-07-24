@@ -16,6 +16,7 @@ Project breakdown:
 -   Tests using Jest and React Testing Library
 -   Optimisation for Fonts and Images (including background)
 -   Minimal packages used
+-   Inital Dockerfile, this could do with improvements but it a useful first step
 
 I've not currently got a CMS as the source of truth for the content but I've taken the first step by having a single source of truth for the contentData which would be one of the first steps to implement that feature.
 I've also added some VERY simple dummy form validation, for when fields are missing, this was so that my tests would have some real user interaction as that is one of most valuable use cases for tests.
