@@ -36,6 +36,7 @@ export const contentData = {
         },
     },
     ourWork: {
+        backgroundText: 'Digital Marketing',
         title: 'Automate your business',
         textContent: [
             {

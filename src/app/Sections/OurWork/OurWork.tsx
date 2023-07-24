@@ -84,7 +84,7 @@ export const OurWork = () => {
             />
             <div className={`${pageStyles['centered-dash']}`}></div>
             <div className={`${ourWorkstyles['content__background-text']}`}>
-                {contentData.ourWork.title}
+                {contentData.ourWork.backgroundText}
             </div>
             <div className={`${pageStyles['horizontal-graphic']}`}>
                 <div className={`${pageStyles['horizontal-dash']}`}></div>
