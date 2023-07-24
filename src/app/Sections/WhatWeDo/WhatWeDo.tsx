@@ -11,6 +11,7 @@ import { Column } from '@components/Layout/Column/Column'
 import { Row } from '@components/Layout/Row/Row'
 import { IconWrapper } from '@components/Graphics/Icon/Icon'
 import { Circle } from '@components/Graphics/Circle/Circle'
+import { contentData } from '@/app/data/contentData'
 
 const mockIconData = [
     {
@@ -28,9 +29,10 @@ const mockIconData = [
 ]
 
 export const WhatWeDo = (): JSX.Element => {
+    const splitTopTitle = contentData.whatWeDo.top.title.split(' ')
     return (
         <section className={`${whatWeDoStyles['what-we-do']}`}>
-            <SplitBackground text="Automation" />
+            <SplitBackground text={contentData.whatWeDo.backgroundText} />
             <Column classes={['flex-column--width-60']}>
                 <div className={`${whatWeDoStyles['top']}`}>
                     <div
@@ -39,39 +41,26 @@ export const WhatWeDo = (): JSX.Element => {
                     <div
                         className={`${whatWeDoStyles['top__grid--top-right']} ${textStyles['font--secondary']} ${textStyles['font--regular']}`}
                     >
-                        Nulla non ligula efficitur, venenatis leo a, aliquam
-                        eros. Vivamus vitae dictum nisi. Aliquam at arcu orci.
-                        Cras sapien mauris, facilisis ut enim ut, pharetra
-                        interdum felis. Proin id ante ante. Maecenas sodales
-                        ultrices ornare. Duis commodo sem et volutpat malesuada.
-                        Duis elit mi, interdum id posuere ut, semper elementum
-                        turpis. Sed varius volutpat quam id maximus.
+                        {contentData.whatWeDo.top.paragraphs[0]}
                     </div>
                     <h2
                         className={`${whatWeDoStyles['top__grid--bottom-left']} ${textStyles['font--primary']} ${textStyles['font--bold']} ${textStyles['font--size-large']}`}
                     >
-                        Automate{' '}
+                        {`${splitTopTitle[0]} `}
                         <span
                             className={` ${textStyles['font--secondary']} ${textStyles['font--bold']}`}
                         >
-                            <em>your </em>
+                            <em>{`${splitTopTitle[1]} `} </em>
                         </span>
                         <br />
                         <span className={` ${textStyles['font--size-xlarge']}`}>
-                            business
+                            {`${splitTopTitle[2]} `}
                         </span>
                     </h2>
                     <div
                         className={`${whatWeDoStyles['top__grid--bottom-right']} ${textStyles['font--primary']} ${textStyles['font--regular']}`}
                     >
-                        Donec efficitur velit erat, eget facilisis massa gravida
-                        eget. Morbi varius dolor ut lectus fringilla, in euismod
-                        sapien tempor. Donec massa tellus, cursus sit amet sem
-                        ut, pellentesque scelerisque purus. Morbi a consectetur
-                        ipsum. Sed metus risus, imperdiet in lorem vitae,
-                        vestibulum convallis nunc. Donec sed eros augue. Aliquam
-                        aliquet velit eget massa luctus, quis consectetur ex
-                        interdum.{' '}
+                        {contentData.whatWeDo.top.paragraphs[1]}{' '}
                     </div>
                 </div>
                 <div
@@ -128,15 +117,10 @@ export const WhatWeDo = (): JSX.Element => {
                         quam venenatis?
                     </h2>
                     <div className={`${textStyles['font--primary']}`}>
-                        Etiam elementum efficitur auctor. Duis tempor nisi ut
-                        risus pellentesque posuere. Fusce vehicula massa at
-                        sodales porta. Proin sodales, mauris ac blandit
-                        sagittis, nunc ligula auctor dolor, quis euismod ligula
-                        erat eget erat. Aliquam faucibus libero vitae turpis
-                        molestie, feugiat commodo.
+                        {contentData.whatWeDo.bottom.paragraphs[0]}
                     </div>
                     <button className={`${pageStyles.button}`}>
-                        LEARN MORE
+                        {contentData.generic.buttonText}
                     </button>
                 </div>
             </Column>

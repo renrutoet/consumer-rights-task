@@ -11,19 +11,7 @@ import textStyles from '@styles/text.module.scss'
 import ourWorkstyles from './OurWork.module.scss'
 import { Circle } from '@components/Graphics/Circle/Circle'
 import { Row } from '@/app/components/Layout/Row/Row'
-
-const mockData = [
-    {
-        title: 'Web design and development',
-        body: 'Donec sed eros augue. Aliquam aliquet velit eget massa luctus, quis consectetur ex interdum. Cras nibh enim, vulputate necturpis ac, tincidunt molestie nibh. Aliquam a cursus felis. Sedvestibulum id quam feugiat efficitur. Etiam rhoncus pretium quamat cursus. Donec ac porttitor neque. In venenatis at lectus nontempus.',
-        buttonText: 'LEARN MORE',
-    },
-    {
-        title: 'Search engine optimization',
-        body: 'Donec sed eros augue. Aliquam aliquet velit eget massa luctus, quis consectetur ex interdum. Cras nibh enim, vulputate necturpis ac, tincidunt molestie nibh. Aliquam a cursus felis. Sedvestibulum id quam feugiat efficitur. Etiam rhoncus pretium quamat cursus. Donec ac porttitor neque. In venenatis at lectus nontempus.',
-        buttonText: 'LEARN MORE',
-    },
-]
+import { contentData } from '@/app/data/contentData'
 
 interface ContentProps {
     title: ReactNode
@@ -32,29 +20,17 @@ interface ContentProps {
     alignment?: 'left' | 'right'
 }
 
-const WebSectionTitle = (): JSX.Element => {
+const SectionTitle = (title: string): JSX.Element => {
+    const splitTitle = title.split(' ')
     return (
         <h2
             className={`${textStyles['font--primary']} ${ourWorkstyles['content__title']}`}
         >
-            <em>Web </em>
+            <em>{`${splitTitle.slice(0, 1)} `}</em>
             <span className={`${textStyles['font--secondary']}`}>
-                <em>design</em>
+                <em>{`${splitTitle.slice(1, 2)} `}</em>
             </span>{' '}
-            <p>and development</p>
-        </h2>
-    )
-}
-const SEOSectionTitle = (): JSX.Element => {
-    return (
-        <h2
-            className={`${textStyles['font--primary']} ${ourWorkstyles['content__title']}`}
-        >
-            <em>Search </em>
-            <span className={`${textStyles['font--secondary']}`}>
-                <em>engine</em>
-            </span>{' '}
-            <p>optimization</p>
+            <p>{splitTitle.slice(2).join(' ')}</p>
         </h2>
     )
 }
@@ -103,12 +79,12 @@ export const OurWork = () => {
                     objectFit: 'cover',
                     position: 'absolute',
                     height: 'auto',
-                    width: '60%',
+                    width: '50%',
                 }}
             />
             <div className={`${pageStyles['centered-dash']}`}></div>
             <div className={`${ourWorkstyles['content__background-text']}`}>
-                Digital Marketing
+                {contentData.ourWork.title}
             </div>
             <div className={`${pageStyles['horizontal-graphic']}`}>
                 <div className={`${pageStyles['horizontal-dash']}`}></div>
@@ -135,9 +111,11 @@ export const OurWork = () => {
                     </Row>
                 </aside>
                 <Content
-                    title={WebSectionTitle()}
-                    body={mockData[0].body}
-                    buttonText={mockData[0].buttonText}
+                    title={SectionTitle(
+                        contentData.ourWork.textContent[0].title
+                    )}
+                    body={contentData.ourWork.textContent[0].body}
+                    buttonText={contentData.generic.buttonText}
                     alignment="left"
                 />
                 <div className={`${pageStyles['horizontal-graphic--left']}`}>
@@ -148,9 +126,11 @@ export const OurWork = () => {
                 </div>
                 <div></div>
                 <Content
-                    title={SEOSectionTitle()}
-                    body={mockData[1].body}
-                    buttonText={mockData[1].buttonText}
+                    title={SectionTitle(
+                        contentData.ourWork.textContent[1].title
+                    )}
+                    body={contentData.ourWork.textContent[1].body}
+                    buttonText={contentData.generic.buttonText}
                     alignment="right"
                 />
                 <aside

@@ -7,6 +7,7 @@ import facebookIcon from '@public/icons/social-media-facebook-1.svg'
 import twitterIcon from '@public/icons/social-media-twitter.svg'
 import instagramIcon from '@public/icons/social-instagram.svg'
 import linkedinIcon from '@public/icons/professional-network-linkedin.svg'
+import { contentData } from '@/app/data/contentData'
 
 const mockSocialMediaData = [
     {
@@ -74,8 +75,7 @@ export const ContactFooter = () => {
                 <p
                     className={`${textStyles['font--secondary']} ${textStyles['font--italic']} ${textStyles['text-center']}`}
                 >
-                    Copyright © 2019 Digital Litigation Partners. All rights
-                    reserved. | Terms & Condtitions | Privacy Policy
+                    {contentData.contact.footer}
                 </p>
             </div>
         </>

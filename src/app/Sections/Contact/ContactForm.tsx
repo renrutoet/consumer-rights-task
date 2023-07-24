@@ -4,6 +4,7 @@ import contactStyles from './Contact.module.scss'
 import textStyles from '@styles/text.module.scss'
 import pageStyles from '@styles/Page.module.scss'
 import { Input } from '@components/UI/Input/Input'
+import { contentData } from '@/app/data/contentData'
 
 interface Message {
     success: string
@@ -61,7 +62,7 @@ export const ContactForm = () => {
                 <fieldset>
                     <legend>
                         <h2 className={`${contactStyles['contact__title']} `}>
-                            <em>Enquire online</em>
+                            <em>{contentData.contact.form.heading}</em>
                         </h2>
                     </legend>
 
@@ -146,10 +147,10 @@ export const ContactForm = () => {
             </form>
 
             <p className={`${contactStyles['contact__legal']}`}>
-                *By pressing send you consent to Digital Litigation Partners
-                collecting your submitted information in order to respond to
-                your enquiry. For more information view our{' '}
-                <Link href="#">Privacy Policy</Link>
+                {contentData.contact.form.disclaimer.text}
+                <Link href="#">
+                    {contentData.contact.form.disclaimer.linkText}
+                </Link>
             </p>
         </div>
     )
