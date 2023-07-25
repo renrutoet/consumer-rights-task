@@ -2,11 +2,11 @@ import textStyles from '@styles/text.module.scss'
 import whatWeDoStyles from './WhatWeDo.module.scss'
 
 export const AutomationContent = ({
-    contentData,
+    cmsData,
 }: {
-    contentData: Record<string, any>
+    cmsData: Record<string, any>
 }) => {
-    const splitTopTitle = contentData.whatWeDo.top.title.split(' ')
+    const splitTopTitle = cmsData.top.title.split(' ')
 
     return (
         <div className={`${whatWeDoStyles['top']}`}>
@@ -14,7 +14,7 @@ export const AutomationContent = ({
             <div
                 className={`${whatWeDoStyles['top__grid--top-right']} ${textStyles['font--secondary']} ${textStyles['font--regular']}`}
             >
-                {contentData.whatWeDo.top.paragraphs[0]}
+                {cmsData.whatWeDo.top.paragraphs[0]}
             </div>
             <h2
                 className={`${whatWeDoStyles['top__grid--bottom-left']} ${textStyles['font--primary']} ${textStyles['font--bold']} ${textStyles['font--size-large']}`}
@@ -33,7 +33,7 @@ export const AutomationContent = ({
             <div
                 className={`${whatWeDoStyles['top__grid--bottom-right']} ${textStyles['font--primary']} ${textStyles['font--regular']}`}
             >
-                {contentData.whatWeDo.top.paragraphs[1]}{' '}
+                {cmsData.whatWeDo.top.paragraphs[1]}{' '}
             </div>
         </div>
     )
