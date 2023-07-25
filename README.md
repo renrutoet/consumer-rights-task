@@ -77,7 +77,7 @@ The inital data (text to match the designs) is seeded when the CMS application i
 
 ## Usage instruction:
 
-After completing the setup (below), you will need to have the Strapi app running any time you want to edit content and view those changes.
+After completing the setup (below), you will need to have the Strapi app and the front end running any time you want to edit content and view those changes.
 
 ### Access the Admin UI
 
@@ -86,7 +86,7 @@ To access this UI and make changes, please do the following.
 
 1. Navigate into the `dlp-cms` directory
 2. Run `npm i` if packages have not already been installed
-3. create an `.env` from the `.env.example` - no value need to be changed
+3. create an `.env` from the `.env.example` - no values need to be changed
 4. run `npm run develop`
 5. navigate to `http://localhost:1337/admin`
 6. Fill in the form to create an admin account - this does not create an account with strapi and is only used locally
@@ -98,27 +98,28 @@ One time Auth setup instructions:
 2. Click `Settings` in the left sidebar
 3. Select `Roles` in the `User and Permissions Plugin`
 4. Click `Public`
-5. Click `DLP-content`
+5. Click `DLP-content` in permissions
 6. Check the `find` checkbox
 7. Click save
 
 This will allow requests to hit the Strapi REST API.
 
+You will need to publish the CMS data before it can be viewed, this is covered in `Editing Content`.
 You can access this REST API at `http://localhost:1337/api/dlp-contents` via a HTTP GET request.
 In any publicly avaliable application we would restrict access to this API to certain roles, users, or applications, however for speed and simplicity we are making it publicly avaliable.
-This gives to Access to the Strapi Admin UI and you can make changes from here.
 
 ### Editing Content:
 
 To change the content of the JSON file, do the following.
 
-1. On the left hand sidebar click `Content Manager`
-2. Select the `DLP-content` if not already selected
-3. Click the single field in the table shown
-4. Edit the JSON as you want
-5. Click save
-6. Click publish if it is not already published
-7. Refresh the dlp front end to view your change
+1. Access the Admin UI
+2. On the left hand sidebar click `Content Manager`
+3. Select the `DLP-content` if not already selected
+4. Click the single field in the table shown
+5. Edit the JSON as you want
+6. Click save
+7. Click publish if it is not already published
+8. Refresh the dlp front end to view your change
 
 Note: There is local fallback data in case of Strapi error so the page can still be viewed without Strapi running.
 You can find it for reference at : `src/app/data/contentData.ts`
