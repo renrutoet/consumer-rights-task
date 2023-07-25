@@ -14,7 +14,7 @@ export const AutomationContent = ({
             <div
                 className={`${whatWeDoStyles['top__grid--top-right']} ${textStyles['font--secondary']} ${textStyles['font--regular']}`}
             >
-                {cmsData.whatWeDo.top.paragraphs[0]}
+                {cmsData.top.paragraphs[0]}
             </div>
             <h2
                 className={`${whatWeDoStyles['top__grid--bottom-left']} ${textStyles['font--primary']} ${textStyles['font--bold']} ${textStyles['font--size-large']}`}
@@ -33,7 +33,7 @@ export const AutomationContent = ({
             <div
                 className={`${whatWeDoStyles['top__grid--bottom-right']} ${textStyles['font--primary']} ${textStyles['font--regular']}`}
             >
-                {cmsData.whatWeDo.top.paragraphs[1]}{' '}
+                {cmsData.top.paragraphs[1]}{' '}
             </div>
         </div>
     )
