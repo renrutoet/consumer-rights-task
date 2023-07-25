@@ -11,7 +11,7 @@ import { Column } from '@components/Layout/Column/Column'
 import { Row } from '@components/Layout/Row/Row'
 import { IconWrapper } from '@components/Graphics/Icon/Icon'
 import { Circle } from '@components/Graphics/Circle/Circle'
-// import { contentData } from '@/app/data/contentData'
+import { AutomationContent } from './AutomationContent'
 
 const mockIconData = [
     {
@@ -37,35 +37,7 @@ export const WhatWeDo = ({
         <section className={`${whatWeDoStyles['what-we-do']}`} id="what-we-do">
             <SplitBackground text={whatWeDo.backgroundText} />
             <Column classes={['flex-column--width-60']}>
-                <div className={`${whatWeDoStyles['top']}`}>
-                    <div
-                        className={`${whatWeDoStyles['top__grid--top-left']} `}
-                    ></div>
-                    <div
-                        className={`${whatWeDoStyles['top__grid--top-right']} ${textStyles['font--secondary']} ${textStyles['font--regular']}`}
-                    >
-                        {whatWeDo.top.paragraphs[0]}
-                    </div>
-                    <h2
-                        className={`${whatWeDoStyles['top__grid--bottom-left']} ${textStyles['font--primary']} ${textStyles['font--bold']} ${textStyles['font--size-large']}`}
-                    >
-                        {`${splitTopTitle[0]} `}
-                        <span
-                            className={` ${textStyles['font--secondary']} ${textStyles['font--bold']}`}
-                        >
-                            <em>{`${splitTopTitle[1]} `} </em>
-                        </span>
-                        <br />
-                        <span className={` ${textStyles['font--size-xlarge']}`}>
-                            {`${splitTopTitle[2]} `}
-                        </span>
-                    </h2>
-                    <div
-                        className={`${whatWeDoStyles['top__grid--bottom-right']} ${textStyles['font--primary']} ${textStyles['font--regular']}`}
-                    >
-                        {whatWeDo.top.paragraphs[1]}{' '}
-                    </div>
-                </div>
+                <AutomationContent contentData={contentData} />
                 <div
                     className={`${whatWeDoStyles['border-details__top-offset']}`}
                 >
